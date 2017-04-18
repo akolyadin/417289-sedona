@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <a class="logo" href="index.html"><img src="#" width="" height="" alt="City Of Sedona»"></a>
+      
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            Гостиницы
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="container">
+    <form class="filter" method="get" action="/echo">
+    <!--Фоновую картинку правильнее в CSS прицепить?-->
+      <div class="filter-group">
+        <span class="">Инфраструктура:</span>
+        <input type="checkbox" id="pool" name="pool" checked>
+        <label for="pool">Бассейн</label>
+        <input type="checkbox" id="motel" name="motel">
+        <label for="motel">Парковка</label>
+        <input type="checkbox" id="wifi" name="wifi">
+        <label for="wifi">Wi-Fi</label>
+      </div>
+      <div class="hotel-type">
+        <span class="">Тип жилья:</span>
+        <input type="checkbox" id="hotel" name="hotel" checked>
+        <label for="hotel">Гостиница</label>
+        <input type="checkbox" id="parking" name="parking" checked>
+        <label for="parking">Мотель</label>
+        <input type="checkbox" id="apart" name="apart" checked>
+        <label for="apart">Апартаменты</label>
+      </div>
+      <div class="price">
+        <span class=:"">Стоимость в стуки (Р):</span>
+        <table>
+        <tr>
+          <td>От 0</th>
+          <td>До 3000</th>
+        </tr>
+        </table>
+        <input type="range" min="0" max="3000" step="100" value="2500" id="price-range">
+      </div>
+      <button class="btn" type="submit">Показать</button>
+    </form>
+    <section class="sort"><!--Не могу понять здесь обычный блок или форма? ТК подразумевается фильтр как он будет работать? На ссылках? или на Инпутах надо делать?-->
+    <h2>Найдено: 3</h2><!--Класс тут не нужен? можно унаследовать от секции выше-->
+    <span>Сортировка:</span>
+    <a href="#" class="sort-price">По цене</a>
+    <a href="#" class="sort-price">По типу</a>
+    <a href="#" class="sort-price">По рейтингу</a>
+    <a href="#" class="sort-up">/\</a>
+    <a href="#" class="sort-down">\/</a>
+    </section>
+    
+    <section class="result">
+    <img src="" width="150" height="100" alt="Amara">
+    <h2>Amara Resort & Spa</h2>
+    <span class="">Гостиница</span>
+    <span class="">От 4000 Р.</span>
+    <a class="btnblue">Подробнее</a>
+    <a class="btnbrown">Забронировать</a>
+    <img src="" width="20" height="20" alt="Star"> <!--Звездочку как то можно сделать в CSS, или это обычная картинка? И если делать реайльную шкалу рейнтинга, на чем она делаетается?-->
+    <img src="" width="20" height="20" alt="Star">
+    <img src="" width="20" height="20" alt="Star">
+    <img src="" width="20" height="20" alt="Star">
+    <span class="rating">Рейтинг: 8,5</span>>
+    </section>
+    <section class="result">
+    <img src="" width="150" height="100" alt="Desert">
+    <h2>Desert Quail Inn</h2>
+    <span class="">Мотель</span>
+    <span class="">От 3000 Р.</span>
+    <a class="btnblue">Подробнее</a>
+    <a class="btnbrown">Забронировать</a>
+    <img src="" width="20" height="20" alt="Star">
+    <img src="" width="20" height="20" alt="Star">
+    <img src="" width="20" height="20" alt="Star">
+    <span class="rating">Рейтинг: 8,9</span>
+    </section>
+    <section class="result">
+    <img src="" width="150" height="100" alt="Amara">
+    <h2>Villas At Poco Diablo</h2>
+    <span class="">Апартаменты</span>
+    <span class="">От 2000 Р.</span>
+    <a class="btnblue">Подробнее</a>
+    <a class="btnbrown">Забронировать</a>
+    <img src="" width="20" height="20" alt="Star">
+    <img src="" width="20" height="20" alt="Star">
+    <span class="rating">Рейтинг: 9,2</span>>
+    </section>
+    </main>
+  </body>
+</html>
