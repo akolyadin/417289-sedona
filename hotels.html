@@ -6,8 +6,7 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="logo" href="index.html"><img src="#" width="" height="" alt="City Of Sedona»"></a>
-      
+      <a class="logo" href="index.html"><img src="#" width="" height="" alt="City Of Sedona"></a>
       <nav class="main-nav">
         <ul>
           <li>
@@ -28,7 +27,7 @@
     
     <main class="container">
     <form class="filter" method="get" action="/echo">
-    <!--Фоновую картинку правильнее в CSS прицепить?-->
+      <!--Фоновую картинку правильнее в CSS прицепить?-->
       <div class="filter-group">
         <span class="">Инфраструктура:</span>
         <input type="checkbox" id="pool" name="pool" checked>
@@ -50,28 +49,28 @@
       <div class="price">
         <span class=:"">Стоимость в стуки (Р):</span>
         <table>
-        <tr>
-          <td>От 0</th>
-          <td>До 3000</th>
-        </tr>
+          <tr>
+            <td>От 0</td>
+            <td>До 4000</td>
+          </tr>
         </table>
         <input type="range" min="0" max="3000" step="100" value="2500" id="price-range">
       </div>
       <button class="btn" type="submit">Показать</button>
     </form>
     <section class="sort"><!--Не могу понять здесь обычный блок или форма? ТК подразумевается фильтр как он будет работать? На ссылках? или на Инпутах надо делать?-->
-    <h2>Найдено: 3</h2><!--Класс тут не нужен? можно унаследовать от секции выше-->
+    <h2 class="main-title">Найдено: 3</h2><!--Класс тут не нужен? можно унаследовать от секции выше-->
     <span>Сортировка:</span>
     <a href="#" class="sort-price">По цене</a>
     <a href="#" class="sort-price">По типу</a>
     <a href="#" class="sort-price">По рейтингу</a>
     <a href="#" class="sort-up">/\</a>
     <a href="#" class="sort-down">\/</a>
-    </section>
-    
-    <section class="result">
+  </section>
+  
+  <section class="result">
     <img src="" width="150" height="100" alt="Amara">
-    <h2>Amara Resort & Spa</h2>
+    <h2 class="main-title">Amara Resort & Spa</h2>
     <span class="">Гостиница</span>
     <span class="">От 4000 Р.</span>
     <a class="btnblue">Подробнее</a>
@@ -80,11 +79,11 @@
     <img src="" width="20" height="20" alt="Star">
     <img src="" width="20" height="20" alt="Star">
     <img src="" width="20" height="20" alt="Star">
-    <span class="rating">Рейтинг: 8,5</span>>
-    </section>
-    <section class="result">
+    <span class="rating">Рейтинг: 8,5</span>
+  </section>
+  <section class="result">
     <img src="" width="150" height="100" alt="Desert">
-    <h2>Desert Quail Inn</h2>
+    <h2 class="main-title">Desert Quail Inn</h2>
     <span class="">Мотель</span>
     <span class="">От 3000 Р.</span>
     <a class="btnblue">Подробнее</a>
@@ -93,18 +92,32 @@
     <img src="" width="20" height="20" alt="Star">
     <img src="" width="20" height="20" alt="Star">
     <span class="rating">Рейтинг: 8,9</span>
-    </section>
-    <section class="result">
+  </section>
+  <section class="result">
     <img src="" width="150" height="100" alt="Amara">
-    <h2>Villas At Poco Diablo</h2>
+    <h2 class="main-title">Villas At Poco Diablo</h2>
     <span class="">Апартаменты</span>
     <span class="">От 2000 Р.</span>
     <a class="btnblue">Подробнее</a>
     <a class="btnbrown">Забронировать</a>
     <img src="" width="20" height="20" alt="Star">
     <img src="" width="20" height="20" alt="Star">
-    <span class="rating">Рейтинг: 9,2</span>>
+    <span class="rating">Рейтинг: 9,2</span>
+  </section>
+  </main>
+  <footer class="main-footer">
+    <section class="VisitSedona">
+      <a href="index.html">#VISITSEDONA</a>
     </section>
-    </main>
-  </body>
+    <section class="footer-social">
+      <a class="social-btn social-btn-vk" href="http://vk.com"><img src="" width="" height="" alt="VK"></a>
+      <a class="social-btn social-btn-fb" href="http://fb.com"><img src="" width="" height="" alt="FaceBook"></a>
+      <a class="social-btn social-btn-youtube" href="http://youtube.com"><img src="" width="" height="" alt="YouTube"></a>
+    </section>
+    <section class="footer-copyright">
+      <p>WEBSITE BY</p>
+      <a class="btn" href="https://htmlacademy.ru"><img src="" alt="html_logo"></a>
+    </section>
+  </footer>
+</body>
 </html>
