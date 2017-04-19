@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <main>
     <header class="main-header">
       <a class="logo" href="index.html"><img src="#" width="" height="" alt="City Of Sedona"></a>
       <nav class="main-nav">
@@ -25,11 +26,10 @@
       </nav>
     </header>
     
-    <main class="container">
+    
     <form class="filter" method="get" action="/echo">
-      <!--Фоновую картинку правильнее в CSS прицепить?-->
       <div class="filter-group">
-        <span class="">Инфраструктура:</span>
+        <b class="filter-title">Инфраструктура:</b>
         <input type="checkbox" id="pool" name="pool" checked>
         <label for="pool">Бассейн</label>
         <input type="checkbox" id="motel" name="motel">
@@ -37,8 +37,8 @@
         <input type="checkbox" id="wifi" name="wifi">
         <label for="wifi">Wi-Fi</label>
       </div>
-      <div class="hotel-type">
-        <span class="">Тип жилья:</span>
+      <div class="filter-group">
+        <b class="filter-title">Тип жилья:</b>
         <input type="checkbox" id="hotel" name="hotel" checked>
         <label for="hotel">Гостиница</label>
         <input type="checkbox" id="parking" name="parking" checked>
@@ -46,97 +46,115 @@
         <input type="checkbox" id="apart" name="apart" checked>
         <label for="apart">Апартаменты</label>
       </div>
-      <div class="price">
-        <span class=:"">Стоимость в стуки (Р):</span>
-        <table>
-          <tr>
-            <td>От 0</td>
-            <td>До 4000</td>
-          </tr>
-        </table>
-        <input type="range" min="0" max="3000" step="100" value="2500" id="price-range">
+      <div class="filter-cost">
+        <b class="filter-title">Стоимость в стуки (Р):</b>
+        <div class="filter-range">
+          <label>от <input class="filter-field field-min" type="text" value="0"></label>
+          <label>до <input class="filter-field field-max" type="text" value="3000"></label>
+        </div>
+        <div class="range-controls">
+          <div class="toggle min-toggle"></div>
+          <div class="toggle max-toggle"></div>
+        </div>
+        <button type="submit" class="btn-filter">Показать</button>
       </div>
-      <button class="btn" type="submit">Показать</button>
     </form>
-    <section class="sort"><!--Не могу понять здесь обычный блок или форма? ТК подразумевается фильтр как он будет работать? На ссылках? или на Инпутах надо делать?-->
-    <h2 class="main-title">Найдено: 3</h2><!--Класс тут не нужен? можно унаследовать от секции выше-->
-    <span>Сортировка:</span>
-    <a href="#" class="sort-price">По цене</a>
-    <a href="#" class="sort-price">По типу</a>
-    <a href="#" class="sort-price">По рейтингу</a>
-    <a href="#" class="sort-up">/\</a>
-    <a href="#" class="sort-down">\/</a>
+    <div class="sort"><!--Не могу понять здесь обычный блок или форма? ТК подразумевается фильтр как он будет работать? На ссылках? или на Инпутах надо делать?-->
+    <b class="sort-title">Найдено: 3</b>
+    <span class="sort-label">Сортировка:</span>
+    <div class="sort-by">
+      <a href="#" class="sort-price">По цене</a>
+      <a href="#" class="sort-price">По типу</a>
+      <a href="#" class="sort-price">По рейтингу</a>
+      <div class="sort-triangles">
+        <a href="#" class="sorting-icon icon-up"></a>
+        <a href="#" class="sorting-icon icon-down"></a>
+      </div>
+    </div>
+  </div>
+  
+  <section class="hotels">
+    <article class="hotel-item">
+      <img class="hotel-image" src="" width="150" height="100" alt="Amara">
+      
+      <div class="hotel-info">
+        <a class="hotel-title" href="#">Amara Resort&ampSpa</a>
+        <!--Надеюсь правильно понял замечание-->
+        <div class="hotel-info-text">
+          <span class="">Гостиница</span>
+          <span class="">От 4000 Р.</span>
+        </div>
+        <div class="hotel-info-btn">
+          <a class=" hotel-item-btn" href="#">Подробнее</a>
+          <a class=" hotel-item-btn btn-dark" href="#">Забронировать</a>
+        </div>
+      </div>
+    </article>
+    <div class="hotel-rating">
+      <div class="hotel-stars"></div>
+      <div class="hotel-star-count"></div>
+      <span class="rating">Рейтинг: 8,5</span>
+    </div>
   </section>
   
   <section class="hotel">
-    <img src="" width="150" height="100" alt="Amara">
-    <article class="hotel-info">
-      <a href="#"><h2 class="main-title">Amara Resort & Spa</h2></a>
-      <div class="hotel-info-part">
-        <span class="">Гостиница</span>
-        <span class="">От 4000 Р.</span>
+    <article class="hotel-item">
+      <img class="hotel-image" src="" width="150" height="100" alt="Desert">
+      <div class="hotel-info">
+        <a class="hotel-title" href="#">Desert Quail Inn</a>
+        <div class="hotel-info-part">
+          <span class="">Мотель</span>
+          <span class="">От 3000 Р.</span>
+        </div>
+        <div class="hotel-info-btn">
+          <a class=" hotel-item-btn" href="#">Подробнее</a>
+          <a class=" hotel-item-btn btn-dark" href="#">Забронировать</a>
+        </div>
       </div>
-      <div class="hotel-info-part">
-        <a class="btnblue">Подробнее</a>
-        <a class="btnbrown">Забронировать</a>
+      <div class="hotel-rating">
+        <div class="hotel-stars"></div>
+        <div class="hotel-star-count"></div>
+        <span class="rating">Рейтинг: 8,9</span>
       </div>
     </article>
-    
-    <img src="" width="20" height="20" alt="Star"> <!--Звездочку как то можно сделать в CSS, или это обычная картинка? И если делать реайльную шкалу рейнтинга, на чем она делаетается?-->
-    <img src="" width="20" height="20" alt="Star">
-    <img src="" width="20" height="20" alt="Star">
-    <img src="" width="20" height="20" alt="Star">
-    <span class="rating">Рейтинг: 8,5</span>
   </section>
   
   <section class="hotel">
-    <img src="" width="150" height="100" alt="Desert">
-    <article class="hotel-info">
-      <a href="#"><h2 class="main-title">Desert Quail Inn</h2></a>
-      <div class="hotel-info-part">
-        <span class="">Мотель</span>
-        <span class="">От 3000 Р.</span>
+    <article class="hotel-item">
+      <img class="hotel-image" src="" width="150" height="100" alt="Amara">
+      <div class="hotel-info">
+        <a class="hotel-title" href="#">Villas At Poco Diablo</a>
+        <div class="hotel-info-part">
+          <span class="">Апартаменты</span>
+          <span class="">От 2000 Р.</span>
+        </div>
+        <div class="hotel-info-btn">
+          <a class="hotel-item-btn" href="#">Подробнее</a>
+          <a class="hotel-item-btn btn-dark" href="#">Забронировать</a>
+        </div>
       </div>
-      <div class="hotel-info-part">
-        <a class="btnblue">Подробнее</a>
-        <a class="btnbrown">Забронировать</a>
-      </div>
-      <img src="" width="20" height="20" alt="Star">
-      <img src="" width="20" height="20" alt="Star">
-      <img src="" width="20" height="20" alt="Star">
-      <span class="rating">Рейтинг: 8,9</span>
     </article>
-  </section>
-  <section class="hotel">
-    <img src="" width="150" height="100" alt="Amara">
-    <article class="hotel-info">
-      <a href="#"><h2 class="main-title">Villas At Poco Diablo</h2></a>
-      <div class="hotel-info-part">
-        <span class="">Апартаменты</span>
-        <span class="">От 2000 Р.</span>
-      </div>
-      <div class="hotel-info-part">
-        <a class="btnblue">Подробнее</a>
-        <a class="btnbrown">Забронировать</a>
-      </div>
-      <img src="" width="20" height="20" alt="Star">
-      <img src="" width="20" height="20" alt="Star">
+    <div class="hotel-rating">
+      <div class="hotel-stars"></div>
+      <div class="hotel-star-count"></div>
       <span class="rating">Рейтинг: 9,2</span>
-    </section>
-    <footer class="main-footer">
-      <section class="VisitSedona">
-        <a href="index.html">#VISITSEDONA</a>
-      </section>
-      <section class="footer-social">
-        <a class="social-btn social-btn-vk" href="http://vk.com"><img src="" width="" height="" alt="VK"></a>
-        <a class="social-btn social-btn-fb" href="http://fb.com"><img src="" width="" height="" alt="FaceBook"></a>
-        <a class="social-btn social-btn-youtube" href="http://youtube.com"><img src="" width="" height="" alt="YouTube"></a>
-      </section>
-      <section class="footer-copyright">
-        <p>WEBSITE BY</p>
-        <a class="btn" href="https://htmlacademy.ru"><img src="" alt="html_logo"></a>
-      </section>
-    </footer>
-    </main>
-  </body>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner"></div>
+    <div class="VisitSedona">
+      <span class="hotel-title">#VISITSEDONA</span>
+    </div>
+    <div class="social">
+      <a class="social-btn social-btn-vk" href="http://vk.com"><img src="" width="" height="" alt="VK"></a>
+      <a class="social-btn social-btn-fb" href="http://fb.com"><img src="" width="" height="" alt="FaceBook"></a>
+      <a class="social-btn social-btn-ytb" href="http://youtube.com"><img src="" width="" height="" alt="YouTube"></a>
+    </div>
+    <div class="copyright">
+      <p>WEBSITE BY</p>
+      <a class="btn" href="https://htmlacademy.ru"><img src="" alt="html_logo"></a>
+    </div>
+  </footer>
+  </main>
+</body>
 </html>
