@@ -79,14 +79,24 @@
       
       <div class="hotel-info">
         <a class="hotel-title" href="#">Amara Resort&ampSpa</a>
-        <!--Надеюсь правильно понял замечание-->
-        <div class="hotel-info-text">
-          <span class="">Гостиница</span>
-          <span class="">От 4000 Р.</span>
+        <!--Совсем тут не понял ничего. По твоему коменту: 2 колонки = 2 div:
+        Можно ли было сделать так:
+        <div>
+          <span class="hotel-info-text">Гостиница</span>
+          <a class="hotel-info-btn" href="#">Подробнее</a>
+        </div
+        <div>
+          <span class="hotel-info-text">>От 4000 Р.</span>
+          <a class="hotel-info-btn btn-dark" href="#">Забронировать</a>
+        </div
+        -->
+        <div>
+          <div class="hotel-info-text">Гостиница</div>
+          <div class="hotel-info-btn"><a href="#">Подробнее</a></div>
         </div>
-        <div class="hotel-info-btn">
-          <a class=" hotel-item-btn" href="#">Подробнее</a>
-          <a class=" hotel-item-btn btn-dark" href="#">Забронировать</a>
+        <div>
+          <div class="hotel-info-text">От 4000 Р.</div>
+          <div class="hotel-item-btn btn-dark"><a href="#">Забронировать</a></div>
         </div>
       </div>
     </article>
@@ -102,13 +112,13 @@
       <img class="hotel-image" src="" width="150" height="100" alt="Desert">
       <div class="hotel-info">
         <a class="hotel-title" href="#">Desert Quail Inn</a>
-        <div class="hotel-info-part">
-          <span class="">Мотель</span>
-          <span class="">От 3000 Р.</span>
+        <div>
+          <div class="hotel-info-text">Мотель</div>
+          <div class="hotel-item-btn"> <a href="#">Подробнее</a></div>
         </div>
-        <div class="hotel-info-btn">
-          <a class=" hotel-item-btn" href="#">Подробнее</a>
-          <a class=" hotel-item-btn btn-dark" href="#">Забронировать</a>
+        <div>
+          <div class="hotel-info-text">От 3000 Р.</div>
+          <div class="hotel-item-btn btn-dark"> <a href="#">Забронировать</a></div>
         </div>
       </div>
       <div class="hotel-rating">
@@ -124,14 +134,16 @@
       <img class="hotel-image" src="" width="150" height="100" alt="Amara">
       <div class="hotel-info">
         <a class="hotel-title" href="#">Villas At Poco Diablo</a>
-        <div class="hotel-info-part">
-          <span class="">Апартаменты</span>
-          <span class="">От 2000 Р.</span>
+        
+        <div>
+          <div class="hotel-info-text">Апартаменты</div>
+          <div class="hotel-item-btn"> <a href="#">Подробнее</a></div>
         </div>
-        <div class="hotel-info-btn">
-          <a class="hotel-item-btn" href="#">Подробнее</a>
-          <a class="hotel-item-btn btn-dark" href="#">Забронировать</a>
+        <div>
+          <div class="hotel-info-text">От 2000 Р.</div>
+          <div class="hotel-item-btn btn-dark"> <a href="#">Забронировать</a></div>
         </div>
+        
       </div>
     </article>
     <div class="hotel-rating">
