@@ -1,0 +1,21 @@
+body{
+	font-size: 14px;
+	line-height: 21px;
+	color: black;
+	font-weight: bold;
+	font-family: 'PT Sans'
+}
+
+.main-title {
+	font-size: 21px;
+	line-height: 26px;
+}
+
+.feautures-title{
+	font-size: 21px;
+	line-height: 22px;
+}
+
+.social-btn {
+	background-color: 81b3d2;
+}
