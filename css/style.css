@@ -1,23 +1,260 @@
-body{
-	margin: 0;
+/*У меня проблема со следующими вещами (толю туплю толи не совсем усвоил а сейчас уже каша совсем в голове):
+1. не получается подцепить картинку в css;
+2. Не понимаю почему вторая страница двигается вправа вроде контейнер и боди одинковые*/
+body {
 	padding: 0;
+	margin: 0;
 	font-size: 14px;
 	line-height: 21px;
-	color: #000;
-	font-weight: bold;
+	color: #000000;
+	font-weight: normal;
 	font-family: 'PT Sans', Arial, sans-serif;
+	text-transform: uppercase;
+
 }
 
-.main-title {
+
+.container {
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+
+header {
+	position: relative;
+}
+
+
+.logo {
+	position: absolute;
+	top:0;
+	left:50%;
+	margin-left:-69px;
+}
+
+ul {
+	padding: 0px;
+	font-size: 0px;
+}
+
+li {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.main-nav li {
+	box-sizing: border-box;
+	width: 240px;
+	display: inline-block;
+}
+.main-nav li:nth-child(1) {
+	padding-left: 72px;
+}
+.main-nav li:nth-child(2) {
+	margin-right: 240px;
+	text-align: center;
+}
+.main-nav li:nth-child(3) {
+	text-align: center;
+}
+.main-nav li:nth-child(4) {
+	padding-right: 72px;
+	text-align: right;
+}
+
+
+
+a {
+	text-decoration:none;
+	color: #000000;
+}
+
+h1 {
+	color: #000000;
+	font-family: "PT Sans", sans-serif;
 	font-size: 21px;
+	font-weight: bold;
 	line-height: 26px;
 }
 
-.feautures-title{
-	font-size: 21px;
-	line-height: 22px;
+.main-title {
+	width: 1200px;
+	padding: 50px 0;
+	text-align: center;
 }
 
-.social-btn {
-	background-color: #81b3d2;
+.main-title h1 {
+	margin-top: 11px;
+	margin-bottom: 27px;
 }
+
+p  {
+	line-height: 26px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+ .benefits {
+ 	height: 256px;
+	background-color: #81b3d2;
+ }
+
+ .benefits .benefits-text {
+ 	float: left;
+ 	width: 400px;
+ 	color: white;
+ 	text-align: center;
+ 	padding-top: 49px;
+ }
+
+
+ .benefits .benefits-image {
+ 	float: right;
+ }
+
+ .benefits .benefits-image
+{
+ 	float: left;
+ }
+
+.features {
+	font-size: 0px;
+}
+
+.feautures-title {
+	font-size: 14px;
+}
+.features-item {
+	display: inline-block;
+	align-items:center;
+	font-size: 14px;
+	width:400px;
+	padding-top: 58px;
+	padding-bottom: 67px;
+	text-align: center
+}
+
+.benefits-gray-bg {
+	font-size: 0px;
+	clear: both;
+	background-color: #eeeeee;
+}
+
+ .benefits-item {
+	display: inline-block;
+	font-size: 14px;
+	width: 400px;
+}
+
+.offer {
+	background-color: white;
+	width: 568px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	padding-top: 42px;
+
+}
+.btn {
+	font-size: 21px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+
+}
+
+
+.offer-btn {
+	display: block;
+	background-color: #766357;
+	font-size: 21px;
+	color: white;
+	text-decoration: none;
+	padding-top: 35px;
+	height: 54px;
+	
+	
+}
+.hotel-search {
+	/*display: none; JS*/
+	clear: both;
+	display: block;
+	box-sizing:border-box;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width: 568px;
+}
+/* JS
+.hotel-search-show {
+	display: block;
+	animation: bounce 0.6s;
+}*/
+
+.hotel-search-row {
+	display: inline-block;
+	height: 30px;
+	padding-top:5px;
+	padding-left: auto;
+	margin-bottom:10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.hotel-search-btn {
+	width: 458px;
+	height: 58px;
+	background-color: #81b3d2;
+	color: #ffffff;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+}
+
+.main-footer {
+	display: inline-block;
+	height: 593px;
+}
+
+.index-footer {
+	background-color: white;
+	float: bottom;
+	opacity: 90%;
+	height: 50px;
+}
+
+.hashtag {
+	float: left;
+	width: 400px;
+	background-color: white;
+}
+
+.social {
+	float: left;
+	width: 400px;
+}
+
+.copyright {
+	float: right;
+	width: 400px;
+}
+/*Проба пера по JS
+@keyframes bounce {
+  0%   {
+    transform: translateY(-70px);
+  }
+  70%  {
+    transform: translateY(-50px);
+  }
+  90%  {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+*/
+ 
