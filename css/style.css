@@ -10,21 +10,25 @@ body {
 	font-weight: normal;
 	font-family: 'PT Sans', Arial, sans-serif;
 	text-transform: uppercase;
+	min-width: 1200px; 
+	background: #f2f2f2;
 
 }
 
 
 .container {
 	width: 1200px;
-	margin-right: auto;
-	margin-left: auto;
+	margin:0 auto;
+	background: #fff;
+	box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2)
+
 }
 
 
 
 
 
-header {
+.main-header {
 	position: relative;
 }
 
@@ -33,160 +37,143 @@ header {
 	position: absolute;
 	top:0;
 	left:50%;
-	margin-left:-69px;
+	transform: translateX(-50%);
 }
 
-ul {
+ .main-nav ul {
 	padding: 0px;
 	font-size: 0px;
-}
-
-li {
-	font-size: 14px;
-	font-weight: bold;
+	padding: 0 6%;
 }
 
 .main-nav li {
+	font-size: 14px;
+	font-weight: bold;
 	box-sizing: border-box;
-	width: 240px;
+	width: 20%;
 	display: inline-block;
 }
-.main-nav li:nth-child(1) {
-	padding-left: 72px;
-}
+
+.main-nav li:nth-child(1),
 .main-nav li:nth-child(2) {
-	margin-right: 240px;
-	text-align: center;
+	text-align: left;
 }
+
+.main-nav li:nth-child(2) {
+	margin-right: 20%;
+}
+
 .main-nav li:nth-child(3) {
-	text-align: center;
+	text-align: right;
 }
 .main-nav li:nth-child(4) {
-	padding-right: 72px;
 	text-align: right;
 }
 
 
-
+/*По тегам читсым нельзя, а как тогда написать для тега а и p стиль? не могу догнать. 
+Преребровыал разные спобоы наследования, нефига*/
 a {
 	text-decoration:none;
 	color: #000000;
 }
 
-h1 {
+
+.main-title {
+	padding: 50px 0;
+	text-align: center;
 	color: #000000;
-	font-family: "PT Sans", sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
 }
 
-.main-title {
-	width: 1200px;
-	padding: 50px 0;
-	text-align: center;
-}
-
-.main-title h1 {
-	margin-top: 11px;
-	margin-bottom: 27px;
-}
-
 p  {
 	line-height: 26px;
-	margin-bottom: 0px;
+	margin: 0px;
 	text-align: center;
 }
 
  .benefits {
- 	height: 256px;
-	background-color: #81b3d2;
+ 	background-color: #81b3d2;
  }
 
- .benefits .benefits-text {
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ .benefits-text {
  	float: left;
- 	width: 400px;
- 	color: white;
+ 	width: 33.3334%;
+ 	color: #fff;
  	text-align: center;
  	padding-top: 49px;
  }
 
 
- .benefits .benefits-image {
- 	float: right;
- }
-
- .benefits .benefits-image
-{
+ .benefits-image {
  	float: left;
+ 	width: 66.6667%;
  }
 
-.features {
-	font-size: 0px;
-}
 
 .feautures-title {
 	font-size: 14px;
 }
 .features-item {
-	display: inline-block;
-	align-items:center;
+	float: left;
 	font-size: 14px;
-	width:400px;
+	width: 33.3334%;
 	padding-top: 58px;
 	padding-bottom: 67px;
-	text-align: center
+	text-align: center;
 }
 
 .benefits-gray-bg {
-	font-size: 0px;
-	clear: both;
 	background-color: #eeeeee;
 }
 
- .benefits-item {
-	display: inline-block;
-	font-size: 14px;
-	width: 400px;
+.benefits-gray-bg .benefits-text {
+	color: #000;
 }
 
 .offer {
-	background-color: white;
 	width: 568px;
 	margin-right: auto;
-	margin-left: auto;
 	text-align: center;
 	padding-top: 42px;
-
+	padding-left: 140px;
+	box-sizing: border-box;
 }
+
 .btn {
 	font-size: 21px;
 	text-decoration: none;
-	color: white;
 	text-transform: uppercase;
-
+	box-sizing: border-box;
+	width: 568px;
 }
-
 
 .offer-btn {
 	display: block;
 	background-color: #766357;
 	font-size: 21px;
-	color: white;
-	text-decoration: none;
+	color: #fff;
 	padding-top: 35px;
-	height: 54px;
-	
-	
 }
+
 .hotel-search {
 	/*display: none; JS*/
-	clear: both;
-	display: block;
-	box-sizing:border-box;
-	margin-right: auto;
-	margin-left: auto;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	z-index:2;
+	margin-left: -284px;
+	/*margin-top: -197px;*/
+	box-sizing: border-box;
 	text-align: center;
+	padding: 10px;
 	width: 568px;
 }
 /* JS
@@ -197,51 +184,85 @@ p  {
 
 .hotel-search-row {
 	display: inline-block;
-	height: 30px;
 	padding-top:5px;
-	padding-left: auto;
-	margin-bottom:10px;
-	margin-right: auto;
-	margin-left: auto;
+
 }
 
 .hotel-search-btn {
 	width: 458px;
-	height: 58px;
 	background-color: #81b3d2;
 	color: #ffffff;
-	border-bottom-style: none;
-	border-bottom-width: 0px;
+	border: 0px;
+	padding-top: 17px;
+	padding-bottom: 21px;
+
 }
 
 /*Недогоняю как с футером сделать*/
 .main-footer {
-	display: inline-block;
-	height: 593px;
+	position: relative;
+}
+
+.map{
+	width: 100%:
+	height:593; 
+	/*Не понимаю почему картинки не отображаются, как правильно?*/
+	background: url(../img/map.jpg); 
+	background: url("../img/map.jpg");
+	background: url("../map.jpg");
 }
 
 .index-footer {
-	background-color: white;
-	float: bottom;
-	opacity: 90%;
-	height: 50px;
+	background-color: #fff;
+	opacity: 0.9;
+	position: absolute; 
+	bottom: 0;
+	z-index: 1; 
+	padding:  0 6%;
+	width: 100%;
+	box-sizing:  border-box;
+	font-size: 0px;
 }
 
 .hashtag {
-	float: left;
+	display: inline-block;
+	vertical-align: top;
+	width: 33.3334%;
 	width: 400px;
-	background-color: white;
+	padding-right: 256px;
+	text-align: left;
 }
 
 .social {
-	float: left;
-	width: 400px;
+	display: inline-block;
+	vertical-align: top;
+	width: 33.3334%;
 }
 
 .copyright {
-	float: right;
-	width: 400px;
+	display: inline-block;
+	vertical-align: top;
+	width: 33.3334%;
+	text-align: right;
 }
+
+.intro {
+	position: relative;
+	width: 100%:
+	height: 451px;
+	background: url("../back_photo.jpg"); 
+}
+
+.intro:after{
+position: absolute;
+content: "";
+bottom: 0;
+left:0;
+width:100%;
+height: 57px;
+background: url("../back_photo_bottom.png"); 
+}
+
 /*Проба пера по JS
 @keyframes bounce {
   0%   {
@@ -260,31 +281,31 @@ p  {
 */
 
 .filter {
-	display: block;
-	height: 217px;
+	background: url("../filter_back.jpg");
+	padding: 0 6%:
 }
 
 /*Как прижать влево в группе??*/
 .filter-group {
 	float:left;
-	width: 250px;
+	width: 300px;
 }
  
+ .filter-group label {
+ 	display: block;
+ }
+
 .filter-cost {
-	float:right;
-	width: 150px;
+	float: right;
+	width: 300px;
 }
 
 .sort {
-	display: block;
-	height: 86px;
-
-	
+	padding: 0 6%:
 }
 
 .sort-title {
 	display: inline-block;
-	
 	padding-left: 77px;
 	padding-top: 29px;
 }
@@ -311,15 +332,15 @@ p  {
 .sort-triangles {
 	
 	display: inline-block;
-	height: 5px;
-	padding-left: 400px;
+	
 	
 
 }
 /*Пляшут треугонольники */
 .icon-up {
-	float:right;
-	
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 50px;
 	border: 7px solid transparent;	
 	border-bottom: 11px solid #81b3d2;
 	
@@ -327,30 +348,21 @@ p  {
 
 .icon-down {
 	float:right;
-	
 	border: 7px solid transparent;	
 	border-top: 11px solid #81b3d2;
 }
 
 .hotels {
-	display: block;
-	
-	
-	
+	padding: 0 6%;
 }
 
 .hotel-item {
-	border-top: 1px solid;
-	height: 152px;
-	border-color: #e5e5e5;
+	border-top: 1px solid #e5e5e5
 
 }
 
 .hotel-image {
 	float: left;
-	padding-left: 73px;
-	padding-top: 29px;
-
 }
 
 .hotel-info {
@@ -358,6 +370,15 @@ p  {
 	padding-left: 73px;
 	padding-top: 29px;
 }
+
+.hotel-info-btn {
+	display: block;
+}
+
+ .hotel-info-text {
+ 	float: left;
+ 	width: 110px;
+ }
 
 /*Почему первый рейтинг не флотится справа?*/
 .hotel-rating {

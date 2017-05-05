@@ -30,13 +30,13 @@
       
       <main>
       <div class="intro">
-        <img src="img/back_photo.jpg" width="1200" height="773" alt="Sedona">
+        <img src="img/welcome.png" width="1200" height="773" alt="Welcome">
       </div>
       
       <h1 class="main-title">Седона - не большой городок в Аризоне, Заслуживающий большего!</h1>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       
-      <section class="benefits">
+      <section class="benefits clearfix">
         <div class="benefits-text">
           <h2 class="benefits-title">Настоящий Городок</h2>
           <span>&ndash; №1 &ndash;</span>
@@ -47,7 +47,7 @@
         </div>
       </section>
       
-      <section class="features">
+      <section class="features clearfix">
         <div class="features-item">
           <h2 class="feautures-title feautures-title-house">Жилье</h2>
           <p>Рeкомендуем пожить в настоящем мотеле, все как в кино</p>
@@ -61,8 +61,8 @@
           <p>Не только китайского, но и местного проиводства!</p>
         </div>
       </section>
-      <section class="benefits">
-        
+      
+      <section class="benefits clearfix">
         <div class="benefits-image">
           <img src="img/benefits_image/benefits_mountains.jpg" width="800" height="256" alt="Mountains" >
         </div>
@@ -71,23 +71,22 @@
           <span>&ndash; №2 &ndash;</span>
           <p>Да, по нему можно пройти если конечно вы осмелитесь</p>
         </div>
-        
       </section>
       
-      <section class="benefits benefits-gray-bg">
-        <div class="benefits-item">
+      <section class="benefits benefits-gray-bg clearfix">
+        <div class="benefits-text">
           <h2 class="benefits-title">Небольшая площадь</h2>
           <span>&ndash; №3 &ndash;</span>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
         
-        <div class="benefits-item">
+        <div class="benefits-text">
           <h2 class="benefits-title">Красивая дорога</h2>
           <span>&ndash; №4 &ndash;</span>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
         </div>
         
-        <div class="benefits-item">
+        <div class="benefits-text">
           <h2 class="benefits-title">Мало туристов</h2>
           <span>&ndash; №5 &ndash;</span>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -104,21 +103,21 @@
       <footer class="main-footer">
         <div class="map"></div>
         <form class="hotel-search" action="/echo" method="get">
-          <div class="hotel-search-row">
+          <div class="hotel-search-row clearfix">
             <label for="datearrive">Дата заезда:</label>
             <div class="hotel-search-field">
               <input type="text" name="datearrive" id="datearrive" value="24 апреля 2017">
               <button class="btn-calendar"></button>
             </div>
           </div>
-          <div class="hotel-search-row">
+          <div class="hotel-search-row clearfix">
             <label for="datedepart">Дата выезда:</label>
             <div class="hotel-search-field">
               <input type="text" name="datedepart" id="datedepart" value="4 июля 2017">
               <button class="btn-calendar"></button>
             </div>
           </div>
-          <div class="hotel-search-row">
+          <div class="hotel-search-row clearfix">
             <div class="hotel-search-number">
               <label for="adult">Взрослые:</label>
               <button class="btn-minus"></button>
@@ -151,7 +150,7 @@
       
       
     </div>
-<!--JS
+    <!--JS
     <script src="js/popup.js"></script>*/-->
   </body>
 </html>
