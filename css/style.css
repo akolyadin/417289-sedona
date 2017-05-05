@@ -214,6 +214,7 @@ p  {
 	border-bottom-width: 0px;
 }
 
+/*Недогоняю как с футером сделать*/
 .main-footer {
 	display: inline-block;
 	height: 593px;
@@ -257,4 +258,110 @@ p  {
   }
 }
 */
+
+.filter {
+	display: block;
+	height: 217px;
+}
+
+/*Как прижать влево в группе??*/
+.filter-group {
+	float:left;
+	width: 250px;
+}
  
+.filter-cost {
+	float:right;
+	width: 150px;
+}
+
+.sort {
+	display: block;
+	height: 86px;
+
+	
+}
+
+.sort-title {
+	display: inline-block;
+	
+	padding-left: 77px;
+	padding-top: 29px;
+}
+
+
+.sort-label {
+	display: inline-block;
+	padding-left: 44px;
+	padding-top: 40px;
+}
+
+.sort-by {
+	display: inline-block;
+	padding-left: 40px;
+	padding-top: 40px;
+
+}
+
+.sort-price {
+	display: inline-block;
+	padding-left: 40px;
+}
+
+.sort-triangles {
+	
+	display: inline-block;
+	height: 5px;
+	padding-left: 400px;
+	
+
+}
+/*Пляшут треугонольники */
+.icon-up {
+	float:right;
+	
+	border: 7px solid transparent;	
+	border-bottom: 11px solid #81b3d2;
+	
+}
+
+.icon-down {
+	float:right;
+	
+	border: 7px solid transparent;	
+	border-top: 11px solid #81b3d2;
+}
+
+.hotels {
+	display: block;
+	
+	
+	
+}
+
+.hotel-item {
+	border-top: 1px solid;
+	height: 152px;
+	border-color: #e5e5e5;
+
+}
+
+.hotel-image {
+	float: left;
+	padding-left: 73px;
+	padding-top: 29px;
+
+}
+
+.hotel-info {
+	float: left;
+	padding-left: 73px;
+	padding-top: 29px;
+}
+
+/*Почему первый рейтинг не флотится справа?*/
+.hotel-rating {
+	float: right;
+	
+}
+
