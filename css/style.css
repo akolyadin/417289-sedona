@@ -35,14 +35,16 @@ body {
 	transform: translateX(-50%);
 }
 
+/*Почему задав четко по фотошопу отступы сверху и снищу у меня в итоге менюшка выше чем нужно?*/
  .main-nav ul {
 	padding: 0px;
 	font-size: 0px;
-	padding: 0 6%;
+	padding: 22px 6%;
 }
 
 .main-nav li {
-	font-size: 14px;
+	font-size: 14px;\
+	line-height: 26px;
 	font-weight: bold;
 	box-sizing: border-box;
 	width: 20%;
@@ -88,7 +90,7 @@ a {
 }
 
 .main-title {
-	padding: 50px 0;
+	padding: 50px 380px 38px; /*Чет у меня со шрифтами какой то косяк. В макете падинги по бокам 380. А тут проиходит перескок на другую строчку*/
 	text-align: center;
 	color: #000000;
 	font-size: 21px;
@@ -99,6 +101,7 @@ a {
 .text  {
 	line-height: 26px;
 	margin: 0px;
+	padding-bottom: 56px;
 	text-align: center;
 }
 
@@ -112,11 +115,12 @@ a {
     clear: both;
 }
  .benefits-text {
+ 	font-size: 14px;
  	float: left;
  	width: 33.3334%;
  	color: #fff;
  	text-align: center;
- 	padding-top: 49px;
+ 	padding-top: 47px;
  }
 
 
@@ -126,7 +130,7 @@ a {
  }
 
 
-.feautures-title {
+.feautures-title h2{
 	font-size: 14px;
 }
 
@@ -134,9 +138,29 @@ a {
 	float: left;
 	font-size: 14px;
 	width: 33.3334%;
-	padding-top: 58px;
-	padding-bottom: 67px;
 	text-align: center;
+	background-repeat: no-repeat;
+
+}
+/*Need help*/
+.feautures-title-house {
+	width: 75px;
+	height: 72px;
+	background: url("../img/features/feature_house.png");
+}
+
+.feautures-title-food {
+	transform: translateY(-50px);
+	width: 74px;
+	height: 70px;
+	background: url("../img/features/feature_food.png");
+}
+
+.feautures-title-souvenirs {
+	transform: translateY(-50px);
+	width: 64px;
+	height: 76px;
+	background: url("../img/features/feature_souvenirs.png");
 }
 
 .benefits-gray-bg {
@@ -145,6 +169,7 @@ a {
 
 .benefits-gray-bg .benefits-text {
 	color: #000;
+	padding: 50px 0 63px
 }
 
 .offer {
@@ -152,11 +177,14 @@ a {
 	padding-top: 42px;
 }
 
-.offer p {
-	padding: 0 28%;
+.offer-title {
+	margin-top: 42px;
+	padding: 57px 0 37px;
 }
 
-
+.offer p {
+	padding: 0 0 52px;
+}
 
 .btn {
 	font-size: 21px;
@@ -172,17 +200,16 @@ a {
 	background-color: #766357;
 	font-size: 21px;
 	color: #fff;
-	padding-top: 35px;
+	padding: 35px 0px 33px;
 }
 
 .hotel-search {
-	/*display: none; JS*/
+	display: none; 
 	position:absolute;
 	top: 50%;
 	left: 50%;
 	z-index:2;
 	margin-left: -284px;
-	/*margin-top: -197px;*/
 	box-sizing: border-box;
 	text-align: center;
 	padding: 10px;
@@ -206,7 +233,6 @@ a {
 	border: 0px;
 	padding-top: 17px;
 	padding-bottom: 21px;
-
 }
 
 /*Недогоняю как с футером сделать*/
@@ -217,7 +243,6 @@ a {
 .map{
 	width: 100%;
 	height: 593px; 
-	/*Не понимаю почему картинки не отображаются, как правильно?*/
 	background: url("../img/map.jpg");
 }
 
@@ -226,8 +251,8 @@ a {
 	opacity: 0.9;
 	position: absolute; 
 	bottom: 0;
-	z-index: 1; 
-	padding:  0 6%;
+	z-index: 1;
+	padding:  0px 103px 0px 137px;
 	width: 100%;
 	box-sizing:  border-box;
 	font-size: 0px;
@@ -238,7 +263,9 @@ a {
 	vertical-align: top;
 	width: 33.3334%;
 	text-align: left;
-	font-size: 14px;
+	font-size: 21px;
+	padding-top: 52px;
+	font-weight: bold;
 }
 
 .social {
@@ -246,18 +273,33 @@ a {
 	vertical-align: top;
 	width: 33.3334%;
 	font-size: 0px;
+	text-align: center;
+	padding-top: 36px;
+	
 }
 
 .social-btn {
+	display: inline-block;
 	font-size: 14px;
+	background-color: #81b3d2;
+	margin: 6px;
+	width: 48px;
+	height: 48px;
+	vertical-align: top;
 }
+
 
 .copyright {
 	display: inline-block;
-	vertical-align: top;
 	width: 33.3334%;
 	text-align: right;
 	font-size: 14px;
+	padding: 41px 0 40px;
+}
+
+.copyright p {
+	float: left;
+	padding-left: 105px;
 }
 
 
@@ -280,65 +322,222 @@ a {
 
 .filter {
 	background: url("../img/filter_back.jpg");
-	padding: 0 6%;
+	padding: 30px 6%;
 }
 
-/*Как прижать влево в группе??*/
 .filter-group {
 	float:left;
-	width: 300px;
+	width: 330px;
+	color: #ffffff;
 }
 
- .filter-group input {
- 	display: none;
- }
- 
  .filter-group label {
  	display: block;
+ 	padding: 25px 0px 0px 40px;
+ 	position: relative;
+ 	cursor: pointer;
  }
+
+  .filter-group input {
+ 	display: none;
+ }
+
+/*Закопался с чекбоксами так и не получилось
+
+.filter-group input[type="checkbox"] + label::before {
+	position:absolute;
+	top:0;
+	left:0;
+	width:10px;
+	height:10px;
+	font-size:26px
+	background: url("../img/buttons/button_chekbox_null.png") no-repeat;
+}
+
+.filter-group input[type="checkbox"]:checked + label::before {
+	background: url("../img/buttons/button_chekbox_null.png") no-repeat;
+}
+*/
+
+ .filter-title {
+ 	display: block;
+ 	font-size: 16px;
+	line-height: 21px;
+	margin-bottom: 9px;
+}
 
 .filter-cost {
 	float: right;
-	width: 300px;
+	width: 330px;
+	color: #ffffff;
 }
+
+
+.filter-range {
+	height: 36px;
+	margin-bottom: 20px;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+	font-size: 0;
+	position: relative;
+}
+
+.filter-range::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 22px;
+	background: #ffffff;
+	transform: translate(-50%, -50%);
+}
+
+.filter-range label {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 38px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.filter-range .field-min,
+.filter-range .field-max {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.filter-range input {
+	width: 50px;
+	margin: 0;
+	color: inherit;
+	font: inherit;
+	background: none;
+	border: none;
+}
+
+.range-controls {
+	position: relative;
+	margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background: #1c4f80;
+}
+
+.min-toggle {
+  left: 0;
+}
+
+.max-toggle {
+  left: 80%;
+}
+
+.filter-cost button {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.filter-cost button:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
 
 .sort {
 	padding: 0 6%;
+	margin-bottom: 33px;
 }
 
 .sort-title {
 	display: inline-block;
-	padding-left: 77px;
 	padding-top: 29px;
 }
 
 
 .sort-label {
 	display: inline-block;
-	padding-left: 44px;
+	padding-left: 49px;
 	padding-top: 40px;
+	font-weight: bold;
 }
 
 .sort-by {
 	display: inline-block;
 	padding-left: 40px;
 	padding-top: 40px;
+	font-weight: bold;
 
 }
 
 .sort-price {
 	display: inline-block;
 	padding-left: 40px;
+	color: #81b3d2;
+}
+
+.sort-type {
+	display: inline-block;
+	margin-left: 30px;
+	padding: 0 3px;
+	border-bottom: 1px dotted #81b3d2;
+	color: #c8c8c8;
+
+}
+
+.sort-rate {
+	display: inline-block;
+	margin-left: 30px;
+	padding: 0 3px;
+	border-bottom: 1px dotted #81b3d2;
+	color: #c8c8c8;
 }
 
 .sort-triangles {
-	
 	display: inline-block;
-	
-	
-
+	padding-left: 300px;
 }
-/*Пляшут треугонольники */
+
+
 .icon-up {
 	display: inline-block;
 	vertical-align: top;
@@ -355,12 +554,18 @@ a {
 }
 
 .hotels {
-	padding: 0 6%;
+	/*padding: 0 6%;*/
+	
 }
 
 .hotel-item {
+	padding: 25px 6%;
 	border-top: 1px solid #e5e5e5;
-	padding: 20px 0px 10px 0px; /*PH проверить паддинг*/
+}
+
+.hotel-item:nth-child(3) {
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel-image {
@@ -370,11 +575,22 @@ a {
 .hotel-info {
 	float: left;
 	padding-left: 73px;
-	padding-top: 29px;
 }
 
-.hotel-info-btn {
-	display: block;
+.hotel-title {
+	font-weight: bold;
+	font-size: 21px;
+}
+
+/*Не понимаю почему без тега как с кнопкой подробнее закрашивается вместе с текстом а с тегом вообще не подкрашивается как с кнопкой заброниоввать*/
+.hotel-info-btn{
+	display:block;
+	margin-top:16px;
+	padding:3px 17px;
+	color:#ffffff;
+	background-color:#81b3d2;
+	font-size:14px;
+	font-weight:bold;
 }
 
 .hotel-info-text {
@@ -382,11 +598,24 @@ a {
  	width: 110px;
  }
 
-/*Почему первый рейтинг не флотится справа?*/
+.btn-dark a{
+		display:block;
+	margin-top:16px;
+	padding:3px 17px;
+	color:#ffffff;
+	background-color:#766357;
+	font-size:14px;
+	font-weight:bold;
+ }
+
 .hotel-rating {
 	float: right;
 }
 
+.hotel-star-count {
+	background-color: #f2f2f2;
+	padding: 5px 13px 6px 16px;
+}
 .footer-inner {
 	font-size: 0px;
 	padding:  0 6%;

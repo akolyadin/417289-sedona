@@ -32,8 +32,9 @@
       <form class="filter clearfix" method="get" action="/echo">
         <div class="filter-group">
           <b class="filter-title">Инфраструктура:</b>
-          <input type="checkbox" id="pool" name="pool" checked>
-          <label for="pool">Бассейн</label>
+          <label for="pool">
+          <input type="checkbox" id="pool" name="pool" checked><span></span>
+          Бассейн</label>
           <input type="checkbox" id="motel" name="motel">
           <label for="motel">Парковка</label>
           <input type="checkbox" id="wifi" name="wifi">
@@ -51,10 +52,13 @@
         <div class="filter-cost">
           <b class="filter-title">Стоимость в стуки (Р):</b>
           <div class="filter-range">
-            <label>от <input class="filter-field field-min" type="text" value="0"></label>
-            <label>до <input class="filter-field field-max" type="text" value="3000"></label>
+            <label class="field-min">от <input name="field-min" type="text" value="0"></label>
+            <label class="field-min">до <input name="field-max" type="text" value="3000"></label>
           </div>
           <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
             <div class="toggle min-toggle"></div>
             <div class="toggle max-toggle"></div>
           </div>
@@ -66,8 +70,8 @@
         <span class="sort-label">Сортировка:</span>
         <div class="sort-by">
           <a href="#" class="sort-price">По цене</a>
-          <a href="#" class="sort-price">По типу</a>
-          <a href="#" class="sort-price">По рейтингу</a>
+          <a href="#" class="sort-type">По типу</a>
+          <a href="#" class="sort-rate">По рейтингу</a>
           <div class="sort-triangles">
             <a href="#" class="sorting-icon icon-up"></a>
             <a href="#" class="sorting-icon icon-down"></a>
@@ -81,7 +85,7 @@
             <img src="img/hotels/hotel_amara.jpg" width="135" height="90" alt="Amara">
           </div>
           
-          <div class="hotel-info clearfix">
+          <div class="hotel-info">
             <a class="hotel-title" href="#">Amara Resort&amp;Spa</a>
             <div class="hotel-info-part">
               <div class="hotel-info-text">Гостиница</div>
@@ -141,11 +145,12 @@
       
       </main>
       <footer>
-        <div class="footer-inner">
+        <div class="footer-inner clearfix">
           <div class="hashtag">#visitsedona</div>
           
           <div class="social">
-            <a class="social-btn social-btn-tw" href="http://twitter.com"><img src="img/social/twit.png" width="17" height="15" alt="Twitter"></a>
+            <a class="social-btn social-btn-tw" href="http://twitter.com">
+            <img src="img/social/twit.png" width="17" height="15" alt="Twitter"</a>
             <a class="social-btn social-btn-fb" href="http://fb.com"><img src="img/social/fb.png" width="10" height="19" alt="FaceBook"></a>
             <a class="social-btn social-btn-ytb" href="http://youtube.com"><img src="img/social/ytb.png" width="20" height="16" alt="YouTube"></a>
           </div>
