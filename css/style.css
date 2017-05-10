@@ -12,29 +12,24 @@ body {
 	text-transform: uppercase;
 	min-width: 1200px; 
 	background: #f2f2f2;
-
 }
-
 
 .container {
 	width: 1200px;
 	margin:0 auto;
 	background: #fff;
-	box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2)
-
+	box-shadow: 0 0 15px rgba(0,1,1,0.2);
 }
-
-
-
-
 
 .main-header {
 	position: relative;
 }
 
-
 .logo {
 	position: absolute;
+	width: 138px;
+	height: 70px;
+	z-index: 3;
 	top:0;
 	left:50%;
 	transform: translateX(-50%);
@@ -63,21 +58,34 @@ body {
 	margin-right: 20%;
 }
 
-.main-nav li:nth-child(3) {
-	text-align: right;
-}
+.main-nav li:nth-child(3),
 .main-nav li:nth-child(4) {
 	text-align: right;
 }
 
-
-/*По тегам читсым нельзя, а как тогда написать для тега а и p стиль? не могу догнать. 
-Преребровыал разные спобоы наследования, нефига*/
-a {
-	text-decoration:none;
-	color: #000000;
+.intro {
+	position: relative;
+	width: 100%;
+	height: 451px;
+	padding-top: 131px;
+	text-align: center;
+	background: url("../img/back_photo.jpg"); /*Экпортировать картинку из PH с тире попбокам и померить высоту*/
 }
 
+.intro:after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left:0;
+	width:100%;
+	height: 57px;
+	background: url("../img/back_photo_bottom.png"); 
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
 
 .main-title {
 	padding: 50px 0;
@@ -88,7 +96,7 @@ a {
 	line-height: 26px;
 }
 
-p  {
+.text  {
 	line-height: 26px;
 	margin: 0px;
 	text-align: center;
@@ -121,6 +129,7 @@ p  {
 .feautures-title {
 	font-size: 14px;
 }
+
 .features-item {
 	float: left;
 	font-size: 14px;
@@ -139,13 +148,15 @@ p  {
 }
 
 .offer {
-	width: 568px;
-	margin-right: auto;
 	text-align: center;
 	padding-top: 42px;
-	padding-left: 140px;
-	box-sizing: border-box;
 }
+
+.offer p {
+	padding: 0 28%;
+}
+
+
 
 .btn {
 	font-size: 21px;
@@ -153,6 +164,7 @@ p  {
 	text-transform: uppercase;
 	box-sizing: border-box;
 	width: 568px;
+	margin: 0 auto;
 }
 
 .offer-btn {
@@ -184,8 +196,7 @@ p  {
 
 .hotel-search-row {
 	display: inline-block;
-	padding-top:5px;
-
+	padding-top: 5px;
 }
 
 .hotel-search-btn {
@@ -204,12 +215,10 @@ p  {
 }
 
 .map{
-	width: 100%:
-	height:593; 
+	width: 100%;
+	height: 593px; 
 	/*Не понимаю почему картинки не отображаются, как правильно?*/
-	background: url(../img/map.jpg); 
 	background: url("../img/map.jpg");
-	background: url("../map.jpg");
 }
 
 .index-footer {
@@ -228,15 +237,19 @@ p  {
 	display: inline-block;
 	vertical-align: top;
 	width: 33.3334%;
-	width: 400px;
-	padding-right: 256px;
 	text-align: left;
+	font-size: 14px;
 }
 
 .social {
 	display: inline-block;
 	vertical-align: top;
 	width: 33.3334%;
+	font-size: 0px;
+}
+
+.social-btn {
+	font-size: 14px;
 }
 
 .copyright {
@@ -244,24 +257,9 @@ p  {
 	vertical-align: top;
 	width: 33.3334%;
 	text-align: right;
+	font-size: 14px;
 }
 
-.intro {
-	position: relative;
-	width: 100%:
-	height: 451px;
-	background: url("../back_photo.jpg"); 
-}
-
-.intro:after{
-position: absolute;
-content: "";
-bottom: 0;
-left:0;
-width:100%;
-height: 57px;
-background: url("../back_photo_bottom.png"); 
-}
 
 /*Проба пера по JS
 @keyframes bounce {
@@ -281,8 +279,8 @@ background: url("../back_photo_bottom.png");
 */
 
 .filter {
-	background: url("../filter_back.jpg");
-	padding: 0 6%:
+	background: url("../img/filter_back.jpg");
+	padding: 0 6%;
 }
 
 /*Как прижать влево в группе??*/
@@ -290,6 +288,10 @@ background: url("../back_photo_bottom.png");
 	float:left;
 	width: 300px;
 }
+
+ .filter-group input {
+ 	display: none;
+ }
  
  .filter-group label {
  	display: block;
@@ -301,7 +303,7 @@ background: url("../back_photo_bottom.png");
 }
 
 .sort {
-	padding: 0 6%:
+	padding: 0 6%;
 }
 
 .sort-title {
@@ -357,8 +359,8 @@ background: url("../back_photo_bottom.png");
 }
 
 .hotel-item {
-	border-top: 1px solid #e5e5e5
-
+	border-top: 1px solid #e5e5e5;
+	padding: 20px 0px 10px 0px; /*PH проверить паддинг*/
 }
 
 .hotel-image {
@@ -375,7 +377,7 @@ background: url("../back_photo_bottom.png");
 	display: block;
 }
 
- .hotel-info-text {
+.hotel-info-text {
  	float: left;
  	width: 110px;
  }
@@ -383,6 +385,9 @@ background: url("../back_photo_bottom.png");
 /*Почему первый рейтинг не флотится справа?*/
 .hotel-rating {
 	float: right;
-	
 }
 
+.footer-inner {
+	font-size: 0px;
+	padding:  0 6%;
+}
