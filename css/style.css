@@ -43,7 +43,7 @@ body {
 }
 
 .main-nav li {
-	font-size: 14px;\
+	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
 	box-sizing: border-box;
@@ -63,6 +63,18 @@ body {
 .main-nav li:nth-child(3),
 .main-nav li:nth-child(4) {
 	text-align: right;
+}
+
+.main-nav a:hover {
+	color: #81b3d2;
+}
+
+.main-nav a:active {
+	color: #b2b2b2;
+}
+
+#current {
+	color: #766357;
 }
 
 .intro {
@@ -187,6 +199,22 @@ a {
 }
 
 .btn {
+	text-decoration: none;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+.btn:hover {
+	background-color: #669ec0;
+}
+
+.btn:active {
+	background-color: #5496bd;
+	color: #88b6d1
+}
+
+.btn-dark {
 	font-size: 21px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -195,8 +223,18 @@ a {
 	margin: 0 auto;
 }
 
+.btn-dark:hover {
+	background-color: #604e43;
+}
+
+.btn-dark:active {
+	background-color: #503e33;
+	color: #857871;
+}
+
 .offer-btn {
 	display: block;
+	font-size: 21px;
 	background-color: #766357;
 	font-size: 21px;
 	color: #fff;
@@ -204,7 +242,7 @@ a {
 }
 
 .hotel-search {
-	display: none; 
+	display: block; 
 	position:absolute;
 	top: 50%;
 	left: 50%;
@@ -275,8 +313,9 @@ a {
 	font-size: 0px;
 	text-align: center;
 	padding-top: 36px;
-	
 }
+
+
 
 .social-btn {
 	display: inline-block;
@@ -288,6 +327,21 @@ a {
 	vertical-align: top;
 }
 
+.social-btn:hover {
+	background-color: #669ec0;
+}
+
+.social-btn-tw:active {
+	background: url("../img/social/twit_active.png") no-repeat;
+}
+
+.social-btn-fb:active {
+	background: url("../img/social/fb_active.png") no-repeat;
+}
+
+.social-btn-ytb:active {
+	background: url("../img/social/ytb_active.png") no-repeat;
+}
 
 .copyright {
 	display: inline-block;
@@ -300,6 +354,14 @@ a {
 .copyright p {
 	float: left;
 	padding-left: 105px;
+}
+
+.copyright a:hover{
+ 	background-image: url(../img/logo_academy_hover.png);
+}
+
+.copyright a:active{
+ 	background-image: url(../img/logo_academy_active.png);
 }
 
 
@@ -423,24 +485,20 @@ a {
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-
   background: #ffffff;
 }
 
 .toggle {
   position: absolute;
   top: -9px;
-
   width: 4px;
   height: 4px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -506,12 +564,21 @@ a {
 	padding-left: 40px;
 	padding-top: 40px;
 	font-weight: bold;
+}
 
+.sort-by a:hover {
+	border-bottom: 1px dotted #81b3d2;
+	color: #81b3d2;
+}
+
+.sort-by a:active {
+	color: #81b3d2;
 }
 
 .sort-price {
 	display: inline-block;
-	padding-left: 40px;
+	margin-left: 37px;
+	padding: 0 3px;
 	color: #81b3d2;
 }
 
@@ -521,7 +588,6 @@ a {
 	padding: 0 3px;
 	border-bottom: 1px dotted #81b3d2;
 	color: #c8c8c8;
-
 }
 
 .sort-rate {
@@ -582,6 +648,15 @@ a {
 	font-size: 21px;
 }
 
+.hotel-title:hover {
+	color: #81b3d2;
+}
+
+
+.hotel-title:active {
+	color: #b2b2b2;
+}
+
 /*Не понимаю почему без тега как с кнопкой подробнее закрашивается вместе с текстом а с тегом вообще не подкрашивается как с кнопкой заброниоввать*/
 .hotel-info-btn{
 	display:block;
@@ -599,7 +674,7 @@ a {
  }
 
 .btn-dark a{
-		display:block;
+	display:block;
 	margin-top:16px;
 	padding:3px 17px;
 	color:#ffffff;
