@@ -39,7 +39,7 @@ body {
  .main-nav ul {
 	padding: 0px;
 	font-size: 0px;
-	padding: 22px 6%;
+	padding: 18px 6%;
 }
 
 .main-nav li {
@@ -102,7 +102,7 @@ a {
 }
 
 .main-title {
-	padding: 50px 380px 38px; /*Чет у меня со шрифтами какой то косяк. В макете падинги по бокам 380. А тут проиходит перескок на другую строчку*/
+	padding: 50px 340px 38px; /*Чет у меня со шрифтами какой то косяк. В макете падинги по бокам 380. А тут проиходит перескок на другую строчку*/
 	text-align: center;
 	color: #000000;
 	font-size: 21px;
@@ -112,7 +112,8 @@ a {
 
 .text  {
 	line-height: 26px;
-	margin: 0px;
+	margin: 0px auto;
+	max-width: 600px;
 	padding-bottom: 56px;
 	text-align: center;
 }
@@ -126,6 +127,7 @@ a {
     display: table;
     clear: both;
 }
+
  .benefits-text {
  	font-size: 14px;
  	float: left;
@@ -135,30 +137,49 @@ a {
  	padding-top: 47px;
  }
 
+  .benefits-text p {
+  	padding: 0 48px;
+  }
 
  .benefits-image {
  	float: left;
  	width: 66.6667%;
  }
 
-
-.feautures-title h2{
-	font-size: 14px;
+.features {
+	display: inline-block;
+	vertical-align: top;
 }
+
 
 .features-item {
 	float: left;
 	font-size: 14px;
 	width: 33.3334%;
 	text-align: center;
-	background-repeat: no-repeat;
-
 }
+
+.feautures-title h2{
+	font-size: 14px;
+	position: relative;
+}
+
+.features::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%; -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+}
+
 /*Need help*/
-.feautures-title-house {
+.feautures-title-house::before {
+	position: absolute;
 	width: 75px;
-	height: 72px;
-	background: url("../img/features/feature_house.png");
+    height: 72px;
+    background-position: -555px -72px;;
 }
 
 .feautures-title-food {
@@ -319,14 +340,45 @@ a {
 
 .social-btn {
 	display: inline-block;
-	font-size: 14px;
-	background-color: #81b3d2;
-	margin: 6px;
+	vertical-align: top;
 	width: 48px;
 	height: 48px;
-	vertical-align: top;
+	font-size: 0px;
+	background-color: #81b3d2;
+	position: relative;
+	margin: 6px;
+	
+	
 }
 
+.social-btn::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+}
+
+.social-btn-tw::before {
+	width: 17px;
+    height: 15px;
+    background-position: -1108px -72px;
+}
+
+.social-btn-fb::before {
+	width: 10px;
+    height: 19px;
+    background-position: -431px -72px;
+}
+
+.social-btn-ytb::before {
+	width: 20px;
+    height: 16px;
+    background-position: -1162px -72px;
+}
+/*
 .social-btn:hover {
 	background-color: #669ec0;
 }
@@ -342,7 +394,7 @@ a {
 .social-btn-ytb:active {
 	background: url("../img/social/ytb_active.png") no-repeat;
 }
-
+*/
 .copyright {
 	display: inline-block;
 	width: 33.3334%;
