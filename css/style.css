@@ -83,7 +83,7 @@ body {
 	height: 451px;
 	padding-top: 131px;
 	text-align: center;
-	background: url("../img/back_photo.jpg"); /*Экпортировать картинку из PH с тире попбокам и померить высоту*/
+	background: url("../img/back_photo.jpg");
 }
 
 .intro:after {
@@ -102,7 +102,7 @@ a {
 }
 
 .main-title {
-	padding: 50px 340px 38px; /*Чет у меня со шрифтами какой то косяк. В макете падинги по бокам 380. А тут проиходит перескок на другую строчку*/
+	padding: 50px 340px 38px;
 	text-align: center;
 	color: #000000;
 	font-size: 21px;
@@ -128,17 +128,18 @@ a {
     clear: both;
 }
 
+
  .benefits-text {
  	font-size: 14px;
  	float: left;
  	width: 33.3334%;
  	color: #fff;
  	text-align: center;
- 	padding-top: 47px;
+ 	padding-top: 43px;
  }
 
   .benefits-text p {
-  	padding: 0 48px;
+  	padding: 0 40px;
   }
 
  .benefits-image {
@@ -147,53 +148,79 @@ a {
  }
 
 .features {
-	display: inline-block;
 	vertical-align: top;
+	font-size: 0px;
+	text-align: center;
+	padding: 50px 0 71px;
 }
+
+
+ .features p {
+  	padding: 0 37px;
+  }
 
 
 .features-item {
-	float: left;
-	font-size: 14px;
 	width: 33.3334%;
+	display: inline-block;
+	font-size: 14px;
 	text-align: center;
 }
-
-.feautures-title h2{
-	font-size: 14px;
+.feautures-title {
 	position: relative;
+	padding-top: 92px;
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
 }
 
-.features::before {
+.feautures-title::before {
 	content: "";
 	position: absolute;
+	left: 50%;
+	top: -17px;
+	width: 78px;
+	height: 88px;
+	transform: translateX(-50%);
+	background-image: url("../img/spritesheet.png") ;
+	background-repeat: ;
+}
+/*
+.feautures-title {
+	position: relative;
+	padding-top: 70px;
+	vertical-align: top;
+	position: relative;
+}
+	
+
+.feautures-title::before {
+	content: "";
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%; -50%);
+	transform: translate(-50%, -100%);
+	position: absolute;
 	background-image: url("../img/spritesheet.png");
-	background-repeat:no-repeat;
-}
+	background-repeat: no-repeat;
+}*/
 
 /*Need help*/
 .feautures-title-house::before {
-	position: absolute;
 	width: 75px;
     height: 72px;
-    background-position: -555px -72px;;
+    background-position: -740px -10px;
 }
 
-.feautures-title-food {
-	transform: translateY(-50px);
+.feautures-title-food::before {
 	width: 74px;
-	height: 70px;
-	background: url("../img/features/feature_food.png");
+    height: 70px;
+    background-position: -646px -10px;
 }
 
-.feautures-title-souvenirs {
-	transform: translateY(-50px);
-	width: 64px;
-	height: 76px;
-	background: url("../img/features/feature_souvenirs.png");
+.feautures-title-souvenirs::before {
+    width: 64px;
+    height: 76px;
+    background-position: -835px -10px;
 }
 
 .benefits-gray-bg {
@@ -235,7 +262,7 @@ a {
 	color: #88b6d1
 }
 
-.btn-dark {
+.offer-btn {
 	font-size: 21px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -265,14 +292,16 @@ a {
 .hotel-search {
 	display: block; 
 	position:absolute;
-	top: 50%;
+	top: 0%;
 	left: 50%;
 	z-index:2;
 	margin-left: -284px;
 	box-sizing: border-box;
 	text-align: center;
+	font-size: 0px;
 	padding: 10px;
 	width: 568px;
+	background-color: #ffffff;
 }
 /* JS
 .hotel-search-show {
@@ -311,7 +340,7 @@ a {
 	position: absolute; 
 	bottom: 0;
 	z-index: 1;
-	padding:  0px 103px 0px 137px;
+	padding:  36px 103px 36px 137px;
 	width: 100%;
 	box-sizing:  border-box;
 	font-size: 0px;
@@ -336,8 +365,6 @@ a {
 	padding-top: 36px;
 }
 
-
-
 .social-btn {
 	display: inline-block;
 	vertical-align: top;
@@ -347,8 +374,6 @@ a {
 	background-color: #81b3d2;
 	position: relative;
 	margin: 6px;
-	
-	
 }
 
 .social-btn::before {
@@ -361,62 +386,90 @@ a {
 	background-repeat:no-repeat;
 }
 
+.social-btn:hover {
+	background-color: #669ec0;
+}
+
 .social-btn-tw::before {
 	width: 17px;
     height: 15px;
-    background-position: -1108px -72px;
+    background-position: -1476px -10px;
+}
+
+.social-btn-tw:active::before {
+	width: 17px;
+    height: 15px;
+    background-position: -1513px -10px;
 }
 
 .social-btn-fb::before {
 	width: 10px;
     height: 19px;
-    background-position: -431px -72px;
+    background-position: -586px -10px;
+}
+
+.social-btn-fb:active::before {
+	width: 10px;
+    height: 19px;
+    background-position: -616px -10px;
 }
 
 .social-btn-ytb::before {
 	width: 20px;
     height: 16px;
-    background-position: -1162px -72px;
-}
-/*
-.social-btn:hover {
-	background-color: #669ec0;
+    background-position: -1550px -10px;
 }
 
-.social-btn-tw:active {
-	background: url("../img/social/twit_active.png") no-repeat;
+.social-btn-ytb:active::before {
+    width: 20px;
+    height: 16px;
+    background-position: -1590px -10px;
 }
 
-.social-btn-fb:active {
-	background: url("../img/social/fb_active.png") no-repeat;
-}
-
-.social-btn-ytb:active {
-	background: url("../img/social/ytb_active.png") no-repeat;
-}
-*/
 .copyright {
 	display: inline-block;
 	width: 33.3334%;
-	text-align: right;
-	font-size: 14px;
-	padding: 41px 0 40px;
+	font-size: 0px;
+	padding-top: 36px;
 }
+
 
 .copyright p {
 	float: left;
-	padding-left: 105px;
+	font-size: 14px;
+	padding-left: 120px;
 }
 
-.copyright a:hover{
- 	background-image: url(../img/logo_academy_hover.png);
+.copyright a{
+	float: left;
+	font-size: 0px;
+	position: relative;
+	margin: 6px;
 }
 
-.copyright a:active{
- 	background-image: url(../img/logo_academy_active.png);
+.btn-copyright::before {
+	content: "";
+	position: absolute;
+	background-image: url("../img/spritesheet.png");
 }
 
+.btn-copyright::before {
+	width: 113px;
+    height: 39px;
+    background-position: -1077px -10px;
+}
 
+.btn-copyright:hover::before {
+	width: 113px;
+    height: 39px;
+    background-position: -1343px -10px;
+}
+
+.btn-copyright:active::before {
+	width: 113px;
+    height: 39px;
+    background-position: -1210px -10px;
+}
 /*Проба пера по JS
 @keyframes bounce {
   0%   {
@@ -454,6 +507,13 @@ a {
 
   .filter-group input {
  	display: none;
+ }
+
+  .filter-group label::before {
+ 	display: block;
+ 	padding: 25px 0px 0px 40px;
+ 	position: relative;
+ 	cursor: pointer;
  }
 
 /*Закопался с чекбоксами так и не получилось
@@ -651,22 +711,18 @@ a {
 }
 
 .sort-triangles {
-	display: inline-block;
-	padding-left: 300px;
+	float:right;
+	margin-left: auto;
 }
 
 
 .icon-up {
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 50px;
 	border: 7px solid transparent;	
 	border-bottom: 11px solid #81b3d2;
 	
 }
 
 .icon-down {
-	float:right;
 	border: 7px solid transparent;	
 	border-top: 11px solid #81b3d2;
 }
@@ -692,10 +748,11 @@ a {
 
 .hotel-info {
 	float: left;
-	padding-left: 73px;
+	margin-left: 73px;
 }
 
 .hotel-title {
+	display: block;
 	font-weight: bold;
 	font-size: 21px;
 }
@@ -704,11 +761,13 @@ a {
 	color: #81b3d2;
 }
 
-
 .hotel-title:active {
 	color: #b2b2b2;
 }
 
+.hotel-info-part {
+	float: left;
+}
 /*Не понимаю почему без тега как с кнопкой подробнее закрашивается вместе с текстом а с тегом вообще не подкрашивается как с кнопкой заброниоввать*/
 .hotel-info-btn{
 	display:block;
@@ -721,19 +780,21 @@ a {
 }
 
 .hotel-info-text {
- 	float: left;
- 	width: 110px;
+ 	margin: 17px 0;
  }
 
-.btn-dark a{
+.hotel-item-btn {
 	display:block;
-	margin-top:16px;
-	padding:3px 17px;
+	padding:3px 10px;
+	margin-right: 6px;
 	color:#ffffff;
-	background-color:#766357;
+	background-color:#81b3d2;
 	font-size:14px;
 	font-weight:bold;
  }
+.btn-dark {
+	background-color:#766357;
+}
 
 .hotel-rating {
 	float: right;

@@ -32,20 +32,16 @@
       <form class="filter clearfix" method="get" action="/echo">
         <div class="filter-group">
           <b class="filter-title">Инфраструктура:</b>
-          <label for="pool">
-          <input type="checkbox" id="pool" name="pool" checked><span></span>
-          Бассейн</label>
-          <input type="checkbox" id="motel" name="motel">
-          <label for="motel">Парковка</label>
-          <input type="checkbox" id="wifi" name="wifi">
-          <label for="wifi">Wi-Fi</label>
+          <label for="pool"><input type="checkbox" id="pool" name="pool" checked>Бассейн</label>
+          <label for="parking"><input type="checkbox" id="parking" name="parking">Парковка</label>
+          <label for="wifi"><input type="checkbox" id="wifi" name="wifi">Wi-Fi</label>
         </div>
         <div class="filter-group">
           <b class="filter-title">Тип жилья:</b>
           <input type="checkbox" id="hotel" name="hotel" checked>
           <label for="hotel">Гостиница</label>
-          <input type="checkbox" id="parking" name="parking" checked>
-          <label for="parking">Мотель</label>
+          <input type="checkbox" id="motel" name="motel" checked>
+          <label for="motel">Мотель</label>
           <input type="checkbox" id="apart" name="apart" checked>
           <label for="apart">Апартаменты</label>
         </div>
@@ -72,10 +68,10 @@
           <a href="#" class="sort-price">По цене</a>
           <a href="#" class="sort-type">По типу</a>
           <a href="#" class="sort-rate">По рейтингу</a>
-          <div class="sort-triangles">
+        </div>
+        <div class="sort-triangles">
             <a href="#" class="sorting-icon icon-up"></a>
             <a href="#" class="sorting-icon icon-down"></a>
-          </div>
         </div>
       </div>
       
@@ -89,7 +85,7 @@
             <a class="hotel-title" href="#">Amara Resort&amp;Spa</a>
             <div class="hotel-info-part">
               <div class="hotel-info-text">Гостиница</div>
-              <a class="hotel-info-btn" href="#">Подробнее</a>
+              <a class="hotel-item-btn" href="#">Подробнее</a>
             </div>
             <div class="hotel-info-part">
               <div class="hotel-info-text">От 4000 Р.</div>
@@ -108,7 +104,7 @@
             <a class="hotel-title" href="#">Desert Quail Inn</a>
             <div class="hotel-info-part">
               <div class="hotel-info-text">Мотель</div>
-              <a class="hotel-info-btn" href="#">Подробнее</a>
+              <a class="hotel-item-btn" href="#">Подробнее</a>
             </div>
             <div class="hotel-info-part">
               <div class="hotel-info-text">От 3000 Р.</div>
@@ -128,7 +124,7 @@
             
             <div class="hotel-info-part">
               <div class="hotel-info-text">Апартаменты</div>
-              <a class="hotel-info-btn" href="#">Подробнее</a>
+              <a class="hotel-item-btn" href="#">Подробнее</a>
             </div>
             <div class="hotel-info-part">
               <div class="hotel-info-text">От 2000 Р.</div>
@@ -149,14 +145,13 @@
           <div class="hashtag">#visitsedona</div>
           
           <div class="social">
-            <a class="social-btn social-btn-tw" href="#">
-            <img src="img/social/twit.png" width="17" height="15" alt="Twitter"></a>
-            <a class="social-btn social-btn-fb" href="#"><img src="img/social/fb.png" width="10" height="19" alt="FaceBook"></a>
-            <a class="social-btn social-btn-ytb" href="#"><img src="img/social/ytb.png" width="20" height="16" alt="YouTube"></a>
+            <a class="social-btn social-btn-tw" href="#"></a>
+            <a class="social-btn social-btn-fb" href="#"></a>
+            <a class="social-btn social-btn-ytb" href="#"></a>
           </div>
           <div class="copyright">
             <p>WEBSITE BY</p>
-            <a class="btn" href="https://htmlacademy.ru"><img src="img/logo_academy.png" width="113" height="39" alt="html_logo"></a>
+            <a class="btn-copyright" href="https://htmlacademy.ru"></a>
           </div>
         </div>
       </footer>
