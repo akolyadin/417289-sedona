@@ -8,9 +8,5 @@
         popup.classList.toggle("hotel-search-show");
              });
       
-      form.addEventListener("submit", function(evt) {
-        evt.preventDefault();
-        console.log("sfdasfsd");
-      })
 
 
