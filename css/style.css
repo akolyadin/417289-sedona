@@ -282,7 +282,7 @@ a {
 }
 
 .hotel-search {
-	display: none;
+	/*display: none;*/
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -313,7 +313,7 @@ a {
 .hotel-search-row {
 	font-size: 14px;
 	position: relative;
-	padding-bottom: 15px;
+	padding-bottom: 26px;
 }
 
 
@@ -354,8 +354,8 @@ a {
 .hotel-search-row label {
 	float: left;
 	font-weight: bold;
-	padding-top: 10px;
-	padding-right: 10px;
+	padding-top: 9px;
+	/*padding-right: 5px;*/
 	text-align: left;
 }
 input[type="text"] {
@@ -370,7 +370,7 @@ input[type="text"] {
 	border: medium none;
 	height: 38px;
 	font-weight: bold;
-	width: 315px;
+	width: 335px;
 	float: right;
 }
 
@@ -389,7 +389,7 @@ input[type="text"] {
 
 .hotel-search-number input {
 	float: right;
-	width: 100px;
+	width: 120px;
 	border: medium none;
 	background-color: #f2f2f2;
 	height: 38px;
@@ -413,6 +413,7 @@ input[type="text"] {
 	color: #ffffff;
 	border: 0px;
 	padding-top: 17px;
+	margin-top: 25px;
 	padding-bottom: 21px;
 	font-size: 21px;
 }
@@ -420,8 +421,8 @@ input[type="text"] {
 .btn-calendar:before {
 	content: "";
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 20px;
+	left: 28px;
 	transform: translate(-50%, -50%);
 	background-image: url("../img/spritesheet.png");
 	background-repeat: no-repeat;
@@ -446,7 +447,7 @@ input[type="text"] {
 	content: "";
 	position: absolute;
 	top: 20px;
-	left: 30px;
+	left: 10px;
 	transform: translate(-50%, -50%);
 	background-image: url("../img/spritesheet.png");
 	background-repeat:no-repeat;
@@ -470,8 +471,8 @@ input[type="text"] {
 .btn-plus:before {
 	content: "";
 	position: absolute;
-	top: 22px;
-	left: 25px;
+	top: 23px;
+	left: 17px;
 	transform: translate(-50%, -50%);
 	background-image: url("../img/spritesheet.png");
 	background-repeat:no-repeat;
