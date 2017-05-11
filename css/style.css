@@ -1,6 +1,3 @@
-/*У меня проблема со следующими вещами (толю туплю толи не совсем усвоил а сейчас уже каша совсем в голове):
-1. не получается подцепить картинку в css;
-2. Не понимаю почему вторая страница двигается вправа вроде контейнер и боди одинковые*/
 body {
 	padding: 0;
 	margin: 0;
@@ -35,7 +32,6 @@ body {
 	transform: translateX(-50%);
 }
 
-/*Почему задав четко по фотошопу отступы сверху и снищу у меня в итоге менюшка выше чем нужно?*/
  .main-nav ul {
 	padding: 0px;
 	font-size: 0px;
@@ -185,26 +181,7 @@ a {
 	background-image: url("../img/spritesheet.png") ;
 	background-repeat: ;
 }
-/*
-.feautures-title {
-	position: relative;
-	padding-top: 70px;
-	vertical-align: top;
-	position: relative;
-}
-	
 
-.feautures-title::before {
-	content: "";
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -100%);
-	position: absolute;
-	background-image: url("../img/spritesheet.png");
-	background-repeat: no-repeat;
-}*/
-
-/*Need help*/
 .feautures-title-house::before {
 	width: 75px;
     height: 72px;
@@ -290,16 +267,16 @@ a {
 }
 
 .hotel-search {
-	display: block; 
-	position:absolute;
-	top: 0%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
 	left: 50%;
 	z-index:2;
 	margin-left: -284px;
+	padding: 55px 0;
 	box-sizing: border-box;
 	text-align: center;
 	font-size: 0px;
-	padding: 10px;
 	width: 568px;
 	background-color: #ffffff;
 }
@@ -309,9 +286,52 @@ a {
 	animation: bounce 0.6s;
 }*/
 
+/*накрутил тут и запутался окончательно*/
 .hotel-search-row {
+	font-size: 14px;
+	position: relative;
+	padding-bottom: 29px;
+	}
+
+.hotel-search button {
+	float: left;
+	background-color: #f2f2f2;
+	height: 40px;
+	width: 40px;
+	border:  none;
+}
+
+
+.hotel-search-row label {
+	padding-left: 55px;
+	float: left;
+	font-weight: bold;
+}
+
+.hotel-search-field input {
+	background-color: #f2f2f2;
+	width: 300px;
+	border: medium none;
+	height: 38px;
+}
+
+.hotel-search-number {
 	display: inline-block;
+	font-size: 14px
+}
+
+.hotel-search-number label {
+	float: left;
 	padding-top: 5px;
+}
+
+.hotel-search-number input {
+	float: left;
+	width: 48px;
+	border: medium none;
+	background-color: #f2f2f2;
+	height: 38px;
+	
 }
 
 .hotel-search-btn {
@@ -323,7 +343,44 @@ a {
 	padding-bottom: 21px;
 }
 
-/*Недогоняю как с футером сделать*/
+.btn-calendar button {
+	display: none;
+}
+
+.btn-calendar:before {
+	content: "";
+	position: absolute;
+	top: 25%;
+	left: 88%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+}
+
+.btn-calendar:before {
+	width: 21px;
+    height: 22px;
+    background-position: -103px -10px;
+}
+
+.btn-minus:before {
+	content: "";
+	position: absolute;
+	top: 25%;
+	left: 33%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+
+}
+
+.btn-minus:before {
+	width: 12px;
+    height: 3px;
+    background-position: -490px -10px;
+    background-color: #f2f2f2;
+}
+
 .main-footer {
 	position: relative;
 }
@@ -516,24 +573,7 @@ a {
  	cursor: pointer;
  }
 
-/*Закопался с чекбоксами так и не получилось
-
-.filter-group input[type="checkbox"] + label::before {
-	position:absolute;
-	top:0;
-	left:0;
-	width:10px;
-	height:10px;
-	font-size:26px
-	background: url("../img/buttons/button_chekbox_null.png") no-repeat;
-}
-
-.filter-group input[type="checkbox"]:checked + label::before {
-	background: url("../img/buttons/button_chekbox_null.png") no-repeat;
-}
-*/
-
- .filter-title {
+.filter-title {
  	display: block;
  	font-size: 16px;
 	line-height: 21px;
@@ -545,7 +585,6 @@ a {
 	width: 330px;
 	color: #ffffff;
 }
-
 
 .filter-range {
 	height: 36px;
@@ -727,11 +766,6 @@ a {
 	border-top: 11px solid #81b3d2;
 }
 
-.hotels {
-	/*padding: 0 6%;*/
-	
-}
-
 .hotel-item {
 	padding: 25px 6%;
 	border-top: 1px solid #e5e5e5;
@@ -768,7 +802,7 @@ a {
 .hotel-info-part {
 	float: left;
 }
-/*Не понимаю почему без тега как с кнопкой подробнее закрашивается вместе с текстом а с тегом вообще не подкрашивается как с кнопкой заброниоввать*/
+
 .hotel-info-btn{
 	display:block;
 	margin-top:16px;
