@@ -8,7 +8,7 @@ body {
 	font-family: 'PT Sans', Arial, sans-serif;
 	text-transform: uppercase;
 	min-width: 1200px; 
-	background: #f2f2f2;
+	background-color: #f2f2f2;
 }
 
 .container {
@@ -17,6 +17,7 @@ body {
 	background: #fff;
 	box-shadow: 0 0 15px rgba(0,1,1,0.2);
 }
+
 
 .main-header {
 	position: relative;
@@ -78,10 +79,18 @@ body {
 	width: 100%;
 	height: 451px;
 	/*height: 451px;*/
-	padding-top: 131px;
+	padding-top: 70px;
 	text-align: center;
-	background: url("../img/back_photo.jpg");
+	background: url("../img/back_photo.jpg")
 }
+
+.intro:before {
+	position: absolute;
+	transform: translateY(-1000px);
+}
+
+
+
 
 .intro:after {
 	position: absolute;
@@ -189,8 +198,7 @@ a {
 	height: 88px;
 	transform: translateX(-50%);
 	background-image: url("../img/spritesheet.png") ;
-	background-repeat: ;
-}
+	}
 
 .feautures-title-house::before {
 	width: 75px;
@@ -221,17 +229,17 @@ a {
 
 .offer {
 	text-align: center;
-	padding-top: 42px;
+	padding-top: 59px;
 }
 
 .offer-title {
 	font-size: 30px;
-	margin-top: 42px;
+	font-weight: normal;
 	padding: 57px 0 37px;
 }
 
 .offer p {
-	padding: 0 0 52px;
+	padding: 12px 0 38px;
 }
 
 .btn {
@@ -278,7 +286,7 @@ a {
 }
 
 .hotel-search {
-	display: inline-block;
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -291,7 +299,7 @@ a {
 	width: 568px;
 	background-color: #ffffff;
 }
-JS
+
 .hotel-search-show {
 	display: block;
 	animation: bounce 0.6s;
@@ -339,7 +347,6 @@ JS
 	padding-top: 10px;
 	padding-right: 10px;
 	width: 120px;
-
 }
 
 .hotel-search-field input {
@@ -350,7 +357,6 @@ JS
 	font-weight: bold;
 	width: 280px;
 	float: left;
-	
 }
 
 .hotel-search-number {
@@ -379,6 +385,14 @@ JS
 	text-align: center;
 }
 
+.hotel-search input:hover {
+	background-color: #ebebeb;
+}
+
+.hotel-search input:focus {
+	background-color: #ffffff;
+	outline: #e5e5e5 solid 2px;
+}
 
 .hotel-search-btn {
 	width: 458px;
@@ -387,7 +401,7 @@ JS
 	border: 0px;
 	padding-top: 17px;
 	padding-bottom: 21px;
-	font-size: 30px;
+	font-size: 21px;
 }
 
 .btn-calendar:before {
@@ -458,7 +472,7 @@ JS
 	position: absolute; 
 	bottom: 0;
 	z-index: 1;
-	padding:  36px 103px 36px 137px;
+	padding:  10px 103px 36px 137px;
 	width: 100%;
 	box-sizing:  border-box;
 	font-size: 0px;
@@ -627,6 +641,7 @@ JS
  	display: none;
  }
 
+/*Как правильно задать для лейблов псевдоклас checked чтобы не создадлавть отдельный класс?*/
  .filter-var::before {
  	content: "";
 	position: absolute;
@@ -667,6 +682,7 @@ JS
 	background-image: url("../img/spritesheet.png");
 	background-repeat:no-repeat;
  }
+ 
  .filter-var_check:hover::before {
 	width: 26px;
     height: 22px;
@@ -867,20 +883,37 @@ JS
 }
 
 .sort-triangles {
-	float:right;
-	margin-left: auto;
+	float: right;
+	padding-left: 40px;
+	padding-top: 40px;
+	font-size: 0px;
+	height: 10px;
+	box-sizing: border-box;
 }
 
 
 .icon-up {
+	display: inline-block;
 	border: 7px solid transparent;	
-	border-bottom: 11px solid #81b3d2;
-	
+	border-bottom: 11px solid #cccccc;
 }
 
 .icon-down {
+	display: inline-block;
 	border: 7px solid transparent;	
 	border-top: 11px solid #81b3d2;
+}
+
+.icon-up:hover {
+	border-bottom: 11px solid #000000;
+}
+
+.icon-up:active {
+	border-bottom: 11px solid #81b3d2;
+}
+
+.icon-down:hover {
+	border-top: 11px solid #000000;
 }
 
 .hotel-item {
@@ -931,7 +964,7 @@ JS
 }
 
 .hotel-info-text {
- 	margin: 17px 0;
+ 	margin: 11px 0;
  }
 
 .hotel-item-btn {
@@ -943,12 +976,28 @@ JS
 	font-size:14px;
 	font-weight:bold;
  }
+
+
+ .hotel-item-btn:hover {
+	background-color: #669ec0;
+ }
+
+ .hotel-item-btn:active {
+	background-color: #5496bd;
+	color: #88b6d1;
+ }
+
 .btn-dark {
 	background-color:#766357;
 }
 
 .hotel-rating {
 	float: right;
+	color: #666666;
+}
+
+.hotel-stars {
+
 }
 
 .hotel-star-count {
@@ -957,5 +1006,5 @@ JS
 }
 .footer-inner {
 	font-size: 0px;
-	padding:  0 6%;
+	padding:  0 6% 36px;
 }
