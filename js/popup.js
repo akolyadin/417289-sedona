@@ -7,6 +7,3 @@
         evt.preventDefault();
         popup.classList.toggle("hotel-search-show");
              });
-      
-
-
