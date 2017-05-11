@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -32,18 +33,18 @@
       <form class="filter clearfix" method="get" action="/echo">
         <div class="filter-group">
           <b class="filter-title">Инфраструктура:</b>
-          <label for="pool"><input type="checkbox" id="pool" name="pool" checked>Бассейн</label>
-          <label for="parking"><input type="checkbox" id="parking" name="parking">Парковка</label>
-          <label for="wifi"><input type="checkbox" id="wifi" name="wifi">Wi-Fi</label>
+          <label class="filter-var_check" for="pool"><input type="checkbox" id="pool" name="pool" checked>Бассейн</label>
+          <label class="filter-var" for="parking"><input type="checkbox" id="parking" name="parking">Парковка</label>
+          <label class="filter-var" for="wifi"><input type="checkbox" id="wifi" name="wifi">Wi-Fi</label>
         </div>
         <div class="filter-group">
           <b class="filter-title">Тип жилья:</b>
           <input type="checkbox" id="hotel" name="hotel" checked>
-          <label for="hotel">Гостиница</label>
+          <label class="filter-var_check" for="hotel">Гостиница</label>
           <input type="checkbox" id="motel" name="motel" checked>
-          <label for="motel">Мотель</label>
+          <label class="filter-var_check" for="motel">Мотель</label>
           <input type="checkbox" id="apart" name="apart" checked>
-          <label for="apart">Апартаменты</label>
+          <label class="filter-var_check" for="apart">Апартаменты</label>
         </div>
         <div class="filter-cost">
           <b class="filter-title">Стоимость в стуки (Р):</b>

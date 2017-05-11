@@ -72,11 +72,12 @@ body {
 #current {
 	color: #766357;
 }
-
+/*В макете интро фоновая картинка идет чуть выше, не могу понять как ее поднять без наезда на менюшку*/
 .intro {
 	position: relative;
 	width: 100%;
 	height: 451px;
+	/*height: 451px;*/
 	padding-top: 131px;
 	text-align: center;
 	background: url("../img/back_photo.jpg");
@@ -134,8 +135,17 @@ a {
  	padding-top: 43px;
  }
 
+ .benefits-title {
+ 	padding: 0 110px;
+ }
+
   .benefits-text p {
-  	padding: 0 40px;
+  	padding: 0 36px;
+  }
+
+
+  .benefits-image img { 
+  	display: block;
   }
 
  .benefits-image {
@@ -215,6 +225,7 @@ a {
 }
 
 .offer-title {
+	font-size: 30px;
 	margin-top: 42px;
 	padding: 57px 0 37px;
 }
@@ -273,28 +284,48 @@ a {
 	left: 50%;
 	z-index:2;
 	margin-left: -284px;
-	padding: 55px 0;
+	padding: 55px;
 	box-sizing: border-box;
 	text-align: center;
 	font-size: 0px;
 	width: 568px;
 	background-color: #ffffff;
 }
-/* JS
+JS
 .hotel-search-show {
 	display: block;
 	animation: bounce 0.6s;
-}*/
+}
 
-/*накрутил тут и запутался окончательно*/
+/*Кручу верчу а нефига не получатся :(*/
 .hotel-search-row {
 	font-size: 14px;
 	position: relative;
 	padding-bottom: 29px;
-	}
+}
 
-.hotel-search button {
+.btn-calendar {
+	position: absolute;
+	float: right;
+	background-color: #f2f2f2;
+	height: 40px;
+	width: 40px;
+	border: none;
+}
+
+
+.btn-minus {
+	position: absolute;
 	float: left;
+	background-color: #f2f2f2;
+	height: 40px;
+	width: 40px;
+	border:  none;
+}
+
+.btn-plus {
+	position: absolute;
+	float: right;
 	background-color: #f2f2f2;
 	height: 40px;
 	width: 40px;
@@ -303,26 +334,39 @@ a {
 
 
 .hotel-search-row label {
-	padding-left: 55px;
 	float: left;
 	font-weight: bold;
+	padding-top: 10px;
+	padding-right: 10px;
+	width: 120px;
+
 }
 
 .hotel-search-field input {
+	padding-left: 10px;
 	background-color: #f2f2f2;
-	width: 300px;
 	border: medium none;
 	height: 38px;
+	font-weight: bold;
+	width: 280px;
+	float: left;
+	
 }
 
 .hotel-search-number {
-	display: inline-block;
+	float: left;
+	font-size: 14px
+}
+
+.hotel-search-number:nth-child(2) {
+	float: left;
 	font-size: 14px
 }
 
 .hotel-search-number label {
 	float: left;
 	padding-top: 5px;
+	text-align: left;
 }
 
 .hotel-search-number input {
@@ -331,8 +375,10 @@ a {
 	border: medium none;
 	background-color: #f2f2f2;
 	height: 38px;
-	
+	font-weight: bold;
+	text-align: center;
 }
+
 
 .hotel-search-btn {
 	width: 458px;
@@ -341,24 +387,21 @@ a {
 	border: 0px;
 	padding-top: 17px;
 	padding-bottom: 21px;
-}
-
-.btn-calendar button {
-	display: none;
+	font-size: 30px;
 }
 
 .btn-calendar:before {
 	content: "";
 	position: absolute;
-	top: 25%;
-	left: 88%;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	background-image: url("../img/spritesheet.png");
 	background-repeat:no-repeat;
 }
 
 .btn-calendar:before {
-	width: 21px;
+	width: 22px;
     height: 22px;
     background-position: -103px -10px;
 }
@@ -366,8 +409,8 @@ a {
 .btn-minus:before {
 	content: "";
 	position: absolute;
-	top: 25%;
-	left: 33%;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	background-image: url("../img/spritesheet.png");
 	background-repeat:no-repeat;
@@ -378,6 +421,24 @@ a {
 	width: 12px;
     height: 3px;
     background-position: -490px -10px;
+    background-color: #f2f2f2;
+}
+
+.btn-plus:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+
+}
+
+.btn-plus:before {
+	width: 11px;
+    height: 11px;
+    background-position: -10px -10px;
     background-color: #f2f2f2;
 }
 
@@ -557,7 +618,7 @@ a {
 
  .filter-group label {
  	display: block;
- 	padding: 25px 0px 0px 40px;
+ 	padding: 25px 0px 20px 40px;
  	position: relative;
  	cursor: pointer;
  }
@@ -566,12 +627,68 @@ a {
  	display: none;
  }
 
-  .filter-group label::before {
- 	display: block;
- 	padding: 25px 0px 0px 40px;
- 	position: relative;
- 	cursor: pointer;
+ .filter-var::before {
+ 	content: "";
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
  }
+ .filter-var::before {
+	width: 22px;
+    height: 22px;
+    background-position: -364px -10px;
+}
+
+ .filter-var_check::before {
+ 	content: "";
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+ }
+ .filter-var_check::before {
+	width: 26px;
+    height: 22px;
+    background-position: -226px -10px;
+}
+
+
+.filter-var_check:hover::before {
+ 	content: "";
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+ }
+ .filter-var_check:hover::before {
+	width: 26px;
+    height: 22px;
+    background-position: -318px -10px;
+}
+
+   /*
+   .btn-calendar:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("../img/spritesheet.png");
+	background-repeat:no-repeat;
+}
+
+.btn-calendar:before {
+	width: 22px;
+    height: 22px;
+    background-position: -103px -10px;
+}*/
 
 .filter-title {
  	display: block;
