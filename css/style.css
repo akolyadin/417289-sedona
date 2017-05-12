@@ -77,7 +77,7 @@ body {
 	color: #b2b2b2;
 }
 
-.main-nav #current {
+.main-nav .current {
 	color: #766357;
 }
 
@@ -87,7 +87,7 @@ body {
 	height: 432px;
 	padding-top: 78px;
 	text-align: center;
-	background: url("../img/back_photo.jpg");
+	background: #81b3d2 url("../img/back_photo.jpg");
 	background-position: 0 -53px;
 }
 
@@ -147,15 +147,15 @@ a {
  }
 
  .benefits-title {
- 	padding: 4px 110px 7px;
+ 	padding: 4px 120px 7px;
  }
 
   .benefits-text p {
-  	padding: 8px 36px;
+  	padding: 8px 50px;
   }
 
   .benefits-gray-bg p {
-  	padding: 6px 45px;
+  	padding: 6px 60px;
   }
 
   .benefits-image img { 
@@ -175,7 +175,7 @@ a {
 }
 
  .features p {
-  	padding: 6px 37px;
+  	padding: 6px 50px;
   }
 
 .features-item {
@@ -511,14 +511,13 @@ input[type="text"] {
 .map{
 	width: 100%;
 	height: 589px; 
-	background: url("../img/map.jpg");
+	background: #f2f1ef url("../img/map.jpg");
 }
 
 .map iframe {
 	width: 100%;
 	height: 100%;
 	border: 0;
-
 }
 
 .index-footer {
@@ -527,7 +526,7 @@ input[type="text"] {
 	position: absolute; 
 	bottom: 0;
 	z-index: 1;
-	padding: 20px 103px 40px 135px;
+	padding: 20px 97px 40px 134px;
 	width: 100%;
 	-webkit-box-sizing:  border-box;
 	        box-sizing:  border-box;
@@ -660,7 +659,7 @@ input[type="text"] {
 }
 
 .filter {
-	background: url("../img/filter_back.jpg");
+	background: #81b3d2 url("../img/filter_back.jpg");
 	padding: 28px 6% 20px;
 }
 
@@ -727,7 +726,7 @@ input[type="checkbox"]:disabled + label::before {
 
 .filter-cost {
 	float: right;
-	width: 320px;
+	width: 319px;
 	color: #ffffff;
 }
 
@@ -765,8 +764,9 @@ input[type="checkbox"]:disabled + label::before {
 .filter-range .field-min,
 .filter-range .field-max {
   width: 90px;
-  padding-left: 60px;
+  padding-left: 65px;
  }
+
 
 .filter-range input {
 	width: 50px;
@@ -823,7 +823,7 @@ input[type="checkbox"]:disabled + label::before {
 .filter-cost button {
   display: block;
   margin: 0 auto;
-  padding: 6px 36px;
+  padding: 6px 30px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -853,7 +853,7 @@ input[type="checkbox"]:disabled + label::before {
 .sort-label {
 	display: inline-block;
 	vertical-align: top;
-	padding: 3px 0 0 31px;
+	padding: 3px 0 0 43px;
 	font-weight: bold;
 	font-size: 12px;
 }
@@ -878,7 +878,7 @@ input[type="checkbox"]:disabled + label::before {
 .sort-price {
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 0 0 20px;
+	margin: 0 0 0 34px;
 	padding: 0 3px;
 	color: #81b3d2;
 	line-height: 14px;
@@ -887,7 +887,7 @@ input[type="checkbox"]:disabled + label::before {
 .sort-type {
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 17px;
+	margin-left: 23px;
 	padding: 0 3px;
 	border-bottom: 1px dotted #81b3d2;
 	color: #c8c8c8;
@@ -897,7 +897,7 @@ input[type="checkbox"]:disabled + label::before {
 .sort-rate {
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 17px;
+	margin-left: 24px;
 	padding: 0 3px;
 	border-bottom: 1px dotted #81b3d2;
 	color: #c8c8c8;
@@ -999,12 +999,12 @@ input[type="checkbox"]:disabled + label::before {
 }
 
 .hotel-info-text {
- 	margin: 7px 0 13px;
+ 	margin: 7px 0 14px;
  }
 
 .hotel-item-btn {
 	display:block;
-	padding:3px 11px;
+	padding:3px 17px;
 	margin-right: 6px;
 	color:#ffffff;
 	background-color:#81b3d2;
@@ -1012,7 +1012,7 @@ input[type="checkbox"]:disabled + label::before {
 	font-weight:bold;
  }
 .hotel-info-part .btn-dark {
-	padding: 3px 8px;
+	padding: 3px 17px;
 }
 
  .hotel-item-btn:hover {
@@ -1084,7 +1084,7 @@ input[type="checkbox"]:disabled + label::before {
 	font-size: 0px;
 	line-height: 21px;
 	margin:0  7%;
-	padding:  11px 28px 36px 47px;
+	padding:  11px 19px 36px 47px;
 }
 
 .footer-inner .social {
